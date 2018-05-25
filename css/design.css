@@ -16,6 +16,12 @@ body {
 .right {
 	float: right;
 }
+.block_info_left {
+	float: left;
+}
+.block_info_right {
+	float: right;
+}
 .Usr_authen {
 	font-family: Poppins-Medium;
 	font-size: 15px;
