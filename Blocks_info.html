@@ -11,37 +11,62 @@
     <link rel="stylesheet" type="text/css" href="css/block_info.css">
 </head>
 <body>
-    <header class="block_info_serv__head block_info_serv">
+    <header class="serv__head ">
         <div>
-            <h1 class="block_info_serv__name"><strong>BLOCK 11111</strong></h1>
+            <span class="serv__status serv__status--down">
+                &#9679;
+            </span>
+            <h3 class="serv__name">BLOCK 11111</h3>
         </div>
     </header>
-    <section class="serv">
+    <div class="serv">
         <div class="block_info_left">
             <button class="button_rendering" onclick="toSign_up()"><----</button>
         </div>
         <div class="block_info_right">
             <button class="button_rendering" onclick="toSign_up()">----></button>
         </div>
-        <header class="serv__head ">
-            <div>
-                    <span class="serv__status serv__status--down">
-                        &#9679;
-                    </span>
-                <h3 class="serv__name">Blocks info</h3>
-            </div>
-        </header>
+    </div>
+    <div class = "table_panel">
+        <div  style= "overflow-x: auto ">
+        <table >
+            <tbody>
+                <tr class="hover_gradual">
+                    <th>
+                        Hash:
+                    </th>
+                    <td>
+                        aaaaa
+                    </td>
+                </tr>
+                <tr class="hover_gradual">
+                    <th>
+                        Difficulty:
+                    </th>
+                    <td>
+                        3,245
+                    </td>
+                </tr>
+                <tr class="hover_gradual">
+                    <th>
+                        Miner:
+                    </th>
+                    <td>
+                        Simon
+                    </td>
+                </tr>
+                <tr class="hover_gradual">
+                    <th>
+                        Time:
+                    </th>
+                    <td>
+                        1111111
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <div class="serv__gpu  serv__grid-3 serv__modLabel serv__modLabel--yellow">
-            <div class="serv__grid-3">
-                <div class="serv__grid-3">
-                    Tx
-                </div>
-                <div class="serv__grid-3" >
-                    <a href="index.html"><h1>aaaaaaaa</h1></a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    </div>
 </body>
 </html>

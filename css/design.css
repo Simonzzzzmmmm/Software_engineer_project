@@ -151,8 +151,8 @@ main {
 }
 
 .serv {
-	overflow-x: hidden;
-	margin-bottom: 35px;
+	/*overflow-x: hidden;*/
+	margin-bottom: 100px;
 	border-radius: 3px;
 	background-color: #F2F4F8;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
@@ -228,16 +228,15 @@ main {
         overflow-x: hidden; 禁止横向的滚动条
         overflow-y: scroll; 总是显示纵向滚动条
         */
-	overflow-y:scroll;
-	overflow-x: auto;
-	overflow: scroll;
-	scrollbar-face-color: #006400;/*'滚动条凸出部分的颜色*/
-	scrollbar-highlight-color:   #FFFFFF;/*' 滚动条空白部分的颜色*/
-	scrollbar-shadow-color:   #006400;/*滚动条立体的颜色*/
-	scrollbar-3dlight-color:    #006400;/*滚动条亮边的颜色*/
-	scrollbar-arrow-color:   #006400;
-	scrollbar-track-color:    #006400;
-	scrollbar-darkshadow-color:    #006400;
+	/*overflow-y:scroll;*/
+	/*overflow-x: auto;*/
+	/*scrollbar-face-color: #006400;!*'滚动条凸出部分的颜色*!*/
+	/*scrollbar-highlight-color:   #FFFFFF;!*' 滚动条空白部分的颜色*!*/
+	/*scrollbar-shadow-color:   #006400;!*滚动条立体的颜色*!*/
+	/*scrollbar-3dlight-color:    #006400;!*滚动条亮边的颜色*!*/
+	/*scrollbar-arrow-color:   #006400;*/
+	/*scrollbar-track-color:    #006400;*/
+	/*scrollbar-darkshadow-color:    #006400;*/
 }
 
 .serv__grid-3 {
