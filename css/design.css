@@ -14,14 +14,10 @@ body {
 	float: right;
 }
 .right {
+
 	float: right;
 }
-.block_info_left {
-	float: left;
-}
-.block_info_right {
-	float: right;
-}
+
 .Usr_authen {
 	font-family: Poppins-Medium;
 	font-size: 15px;
@@ -35,14 +31,16 @@ body {
 	border-radius: 25px;
 	padding: 0 30px 0 68px;
 }
-
+.gradual_come {
+	/*transform: translate3d(10%, 0, 0);*/
+}
 .button_rendering {
 	font-family: Montserrat-Bold;
 	font-size: 15px;
 	line-height: 1.5;
 	color: #fff;
 	text-transform: uppercase;
-
+	width: 500px;
 	float: right;
 	height: 50px;
 	border-radius: 25px;
@@ -55,7 +53,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 0 25px;
-
+	transition: box-shadow .3s;
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	-moz-transition: all 0.4s;
@@ -71,6 +69,8 @@ body {
 
 .header {
 	background: #FFF;
+	border-collapse: collapse;
+	border-radius: 15px;
 
 	width:100%;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
@@ -106,6 +106,7 @@ body {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 41px;
+	margin-top: auto;
 }
 .holders_info {
 	color: #db2844;
@@ -157,7 +158,56 @@ main {
 	background-color: #F2F4F8;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }
+.table_layout {
+	background-color: #dbd9d7;
+	overflow-x: auto;
+	-webkit-animation: rainbow 10s infinite;
+	animation: rainbow 10s infinite;
+	border-radius: 15px;
+	box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
 
+}
+@-webkit-keyframes rainbow {
+	0%,
+	100% {
+		background-color: #8BC34A
+	}
+	16% {
+		background-color: #80CBC4
+	}
+	32% {
+		background-color: #dbd9d7
+	}
+	48% {
+		background-color: #dbd2d9
+	}
+	64% {
+		background-color: #E57373
+	}
+}
+@keyframes rainbow {
+	0%,
+	100% {
+		background-color: #8BC34A
+	}
+	16% {
+		background-color: #80CBC4
+	}
+	32% {
+		background-color: #dbd9d7
+	}
+	48% {
+		background-color: #dbd6d7
+	}
+	64% {
+		background-color: #04aa06
+	}
+}
+.Log_in_head {
+	border-radius: 15px;
+
+	border-collapse: collapse;
+}
 .serv__head {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -191,16 +241,17 @@ main {
 }
 
 .serv__status--down {
-		color: #FF5F2E
+		color: #04aa06
 }
 
 .serv__name {
 	display: inline;
 	color: #4A4A4A;
-	vertical-align: top;
-	letter-spacing: 0.81px;
-	font-size: 18px;
-	line-height: 24px;
+	vertical-align: middle;
+	letter-spacing: 1px;
+	font-size: 70px;
+	line-height: 100px;
+	font-family: Calibri;
 }
 
 .serv__ip {
