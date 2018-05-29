@@ -13,7 +13,7 @@ th {
 
     border-collapse: collapse;
     transition: 0.5s;
-    background: linear-gradient(#f6f6ff, #0eaa46);
+    background: linear-gradient(#f6f6ff, #dbd2d9);
 }
 .block_info_left {
     float: left;
@@ -111,13 +111,13 @@ th,td {
     overflow-y:scroll;
     overflow-x: auto;
     overflow: scroll;
-    scrollbar-face-color: #006400;/*'滚动条凸出部分的颜色*/
-    scrollbar-highlight-color:   #FFFFFF;/*' 滚动条空白部分的颜色*/
-    scrollbar-shadow-color:   #006400;/*滚动条立体的颜色*/
-    scrollbar-3dlight-color:    #006400;/*滚动条亮边的颜色*/
-    scrollbar-arrow-color:   #006400;
-    scrollbar-track-color:    #006400;
-    scrollbar-darkshadow-color:    #006400;
+    scrollbar-face-color: #fcffff;/*'滚动条凸出部分的颜色*/
+    scrollbar-highlight-color: #fffaf7;/*' 滚动条空白部分的颜色*/
+    scrollbar-shadow-color: #dbd6d7;/*滚动条立体的颜色*/
+    scrollbar-3dlight-color: #dbd9d2;/*滚动条亮边的颜色*/
+    scrollbar-arrow-color: #d8d7db;
+    scrollbar-track-color: #ced8db;
+    scrollbar-darkshadow-color: #dbd3cc;
 }
 .block_info_serv__grid-3 {
     display: -webkit-box;
