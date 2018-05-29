@@ -53,6 +53,24 @@ th,td {
     background-color: #F2F4F8;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }
+.block_info_contain_panel {
+    width: 100%;
+    min-height: 15px;
+    /*display: -webkit-box;*/
+    /*display: -webkit-flex;*/
+    /*display: -moz-box;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    align-items: center;
+    /*padding: 15px;*/
+    background: #c7b9c6;
+    background: -webkit-linear-gradient(-135deg, #c8bcba, #47d0b7);
+    background: -o-linear-gradient(-135deg, #c8bcba, #47d0b7);
+    background: -moz-linear-gradient(-135deg, #c8bcba, #47d0b7);
+    background: linear-gradient(-135deg, #c8bcba, #47d0b7);
+}
 .table_panel {
     /*border: 5px solid black;*/
     border-collapse: collapse;
