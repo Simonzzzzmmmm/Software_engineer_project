@@ -1,0 +1,29 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "peer blockchain",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simonzzzzmmmm/Software_engineer_project.git"
+  },
+  "author": "sustc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simonzzzzmmmm/Software_engineer_project/issues"
+  },
+  "homepage": "https://github.com/Simonzzzzmmmm/Software_engineer_project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "http": "0.0.0",
+    "node-uuid": "^1.4.8",
+    "querystring": "^0.2.0",
+    "socket.io": "^2.1.1"
+  }
+}
