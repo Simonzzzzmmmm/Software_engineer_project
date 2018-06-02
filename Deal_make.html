@@ -19,6 +19,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/DashBoard_tab.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -32,44 +33,69 @@
 
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Member Sign Up
+						Make transaction
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email" placeholder="AAAAAccount">
+					<div class="wrap-input100 validate-input" data-validate="you must input a account" >
+						<!--<input class="input100" type="text" name="email" placeholder="ToAcount">-->
+							<select  class="select_render">
+								<option>
+									aaa
+								</option>
+								<option>
+									aaa
+								</option>
+								<option>
+									aaa
+								</option>
+							</select>
+						<span class="focus-input100"></span>
+
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "you must input your account">
+						<input class="input100" type="text" name="email" placeholder="MyAcount">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fa fa-apple" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "enter the value">
+						<input class="input100" type="text" name="email" placeholder="Value">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-bluetooth" aria-hidden="true"></i>
 						</span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="PPPPPassword">
+						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+					<div class="wrap-input100 validate-input" data-validate = "please comfirm your password">
 						<input class="input100" type="password" name="pass" placeholder="Password again">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
-
 					<div class="container-signup100-form-btn">
 						<button class="signup100-form-btn">
-							SIGN UP
+							Go trans
 						</button>
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-13" aria-hidden="true"></i>
+						</a>
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="#">
-							Create your Account
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
+
 					</div>
 				</form>
 			</div>
