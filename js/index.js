@@ -52,7 +52,7 @@ $('.form-action').click(function(){
                 form_id = "success";
                 break;
             case "success":
-                window.location.href = "DashBoard2.html";
+                window.location.href = "Main_panel.html";
                 break;
         }
         $('.icon-action').addClass('back');
@@ -74,7 +74,7 @@ $('.form-action').click(function(){
                 form_id = "account";
                 break;
              case "success":
-                 window.location.href = "DashBoard2.html";
+                 window.location.href = "Main_panel.html";
                 break;
         }
         $('.icon-action').removeClass('back');
