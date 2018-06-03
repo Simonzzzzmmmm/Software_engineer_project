@@ -31,7 +31,7 @@ app.use(bodyParser());
 app.all('/', function (req, res) {
 	// console.log(req);
 	// console.log(res);
-    res.sendfile('/dashboard.html', { root: __dirname });
+    res.sendfile('/DashBoard2.html', { root: __dirname });
 });
 
 
@@ -82,10 +82,13 @@ app.post('/enroll', function (req, res) {
 
 app.post('/rpc', function (req, res, next) {
     console.log(req);
-    // var method = req.body.method;
-	// var params = req.body.params;
-	// rpc.single_post(res, method, params);
+    var method = req.body.method;
+	var params = req.body.params;
+	rpc.single_post(res, method, params);
+});
 
+app.get('/BlockPage', function (req, res, next) {
+    console.log(req);
 	rpc.getBlockPage(res);
 });
 
