@@ -24,6 +24,7 @@ function BlockPage() {
     });
 }
 
+// 将区块模板添加进区块面板
 function AddBlock(data) {
     console.log(data);
     var obj = JSON.parse(data);
@@ -77,10 +78,10 @@ function rpc() {
         "success": function (resp) {
             console.log(resp);
             if (resp.success) {
-                alert('Enroll successfully');
+                alert('RPC success');
                 alert(resp.data);
             } else {
-                alert('Enroll failed! Username existed');
+                alert('RPC failed');
             }
         },
         "error": function (emsg) {

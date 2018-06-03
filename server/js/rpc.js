@@ -6,20 +6,26 @@ var http = require('http'),
 var rpc = module.exports = {};
 
 // 单次post
-rpc.single_post = function name(res, method, params) {
+rpc.single_post = function (res, method, params) {
+    for (let index = 0; index < params.length; index++) {
+        const element = params[index];
+        if (element == "false") {
+            params[index] = false;
+        }
+    }
     var postData = JSON.stringify({
         jsonrpc: "2.0",
         method: method,
         params: params,
         id: 1
     });
-    var success = function (res, data) {
+    var success = function (data) {
         res.json({ "success": true, "data": data });
     }
-    var fail = function (res, err) {
+    var fail = function (err) {
         res.json({ "success": false, "err": err });
     }
-    post(res, postData, success, fail);
+    post(postData, success, fail);
 }
 
 rpc.getBlockPage = function (res) {

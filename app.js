@@ -26,15 +26,12 @@ console.log('\t :: Express listen to port:' + port);
 
 app.use(bodyParser());
 
-
 //设置主页
 app.all('/', function (req, res) {
 	// console.log(req);
 	// console.log(res);
-    res.sendfile('/DashBoard2.html', { root: __dirname });
+    res.sendFile('/Main_panel.html', { root: __dirname });
 });
-
-
 
 //登录请求
 app.post('/login', function (req, res) {
@@ -80,6 +77,7 @@ app.post('/enroll', function (req, res) {
 	});
 });
 
+// 单次rpc调用
 app.post('/rpc', function (req, res, next) {
     console.log(req);
     var method = req.body.method;
@@ -87,9 +85,16 @@ app.post('/rpc', function (req, res, next) {
 	rpc.single_post(res, method, params);
 });
 
+// 获取主页多个区块信息
 app.get('/BlockPage', function (req, res, next) {
     console.log(req);
 	rpc.getBlockPage(res);
+});
+
+// 区块页面获取具体信息
+app.get('/Block_info/0x*', function (req, res, next) {
+	console.log(req);
+	res.sendFile('/block_info_panel.html',  { root: __dirname });
 });
 
 //监听/×文件
@@ -97,7 +102,7 @@ app.all('/*', function (req, res, next) {
 	var file = req.params[0];
 	console.log('\t :: Express :: file requested: ' + file, file.substring(0, 6));
 	if (file.substring(0, 6) != 'server'){ 
-		res.sendfile(__dirname + '/' + file);
+		res.sendFile(__dirname + '/' + file);
     } else {
         res.end();
     }

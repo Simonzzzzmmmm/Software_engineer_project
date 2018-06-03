@@ -1,106 +1,135 @@
-        <!DOCTYPE html>
-        <html lang="en">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Startup Framework Inspired Pricing Table</title>
+<!DOCTYPE html>
+<html lang="en">
 
-            <!-- Bootstrap -->
-            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-            
-            <!-- Main Style -->
-            <link rel="stylesheet" type="text/css" href="css/block_info_panel.css">
-            <link rel="stylesheet" type="text/css" href="css/block_info.css">
-              <!--<link rel="stylesheet" type="text/css" href="css/util.css">-->
-              <!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
-              <link rel="stylesheet" href="css/reset.css">
-              <link rel="stylesheet" href="css/design.css">
-            <!--Icon Fonts-->
-            <link rel="stylesheet" media="screen" href="fonts/font-awesome/font-awesome.min.css" />
-                        
-          </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Startup Framework Inspired Pricing Table</title>
 
-        <body class="block_info_contain_panel">
-        <div class="header">
-            <div class="container">
-                <div class="header__serv">
-                    <h2 class="header__servName">Block</h2>
-                    <div>
-                        <span class="header__statNumber">127810954</span>
-                    </div>
-                </div>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="/css/block_info_panel.css">
+    <link rel="stylesheet" type="text/css" href="/css/block_info.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/util.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/design.css">
+    <!--Icon Fonts-->
+    <link rel="stylesheet" media="screen" href="/fonts/font-awesome/font-awesome.min.css" />
+    <script src='/js/jquery.js'></script>
+    <script type="text/javascript" src="/js/Blocks_info.js"></script>
+</head>
+
+<body class="block_info_contain_panel">
+    <div class="header">
+        <div class="container">
+            <div class="header__serv">
+                <h2 class="header__servName">Block</h2>
                 <div>
-                    <div class="block_info_left">
-                        <button class="button_rendering btn btn-custom" onclick="toBack()"><p><i class="arrow left"></i></p><span>Goback</span></button>
-                    </div>
-                    <div class="block_info_left">
-                        <button class="button_rendering btn btn-custom" onclick="toBack()"><p><i class="arrow left"></i></p><span>GoNext</span></button>
-                    </div>
+                    <span class="header__statNumber number">loading</span>
+                </div>
+            </div>
+            <div>
+                <div class="block_info_left">
+                    <button class="button_rendering btn btn-custom" onclick="toBack()">
+                        <p>
+                            <i class="arrow left"></i>
+                        </p>
+                        <span>Goback</span>
+                    </button>
+                </div>
+                <div class="block_info_left">
+                    <button class="button_rendering btn btn-custom" onclick="toBack()">
+                        <p>
+                            <i class="arrow left"></i>
+                        </p>
+                        <span>GoNext</span>
+                    </button>
                 </div>
             </div>
         </div>
-     	<!-- Pricing Table Section -->
-        <section id="pricing-table">
-            <div class="container">
-                <div class="row">
-                    <div class="pricing">
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <div class="pricing-table">
-                                <div class="pricing-header">
-                                    <p class="pricing-title">Block info</p>
-                                    <p class="pricing-rate">No. <span>127810954</span></p>
-                                </div>
-
-                                <div class="pricing-list">
-                                    <ul>
-                                        <li><span>Hashvalue:</span>1234567890</li>
-                                        <li><span>Blocksize:</span>1234567890</li>
-                                        <li><span>Difficulty:</span>1234567890</li>
-                                        <li><span>Minername:</span>1234567890</li>
-                                    </ul>
-                                </div>
+    </div>
+    <!-- Pricing Table Section -->
+    <section id="pricing-table">
+        <div class="container">
+            <div class="row">
+                <div class="pricing">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="pricing-table">
+                            <div class="pricing-header">
+                                <p class="pricing-title">Block info</p>
+                                <p class="pricing-rate">No.
+                                    <span class="number">127810954</span>
+                                </p>
                             </div>
-                        </div>
 
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <div class="pricing-table">
-                                <div class="pricing-header">
-                                    <p class="pricing-title">Miner</p>
-                                    <p class="pricing-rate"><sup>Miner</sup> ZHOU <span>MENG</span></p>
-
-                                </div>
-
-                                <div class="pricing-list">
-                                    <ul>
-                                        <li><span>Hashvalue:</span>1234567890</li>
-
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-12 col-xs-12">
-                            <div class="pricing-table">
-                                <div class="pricing-header">
-                                    <p class="pricing-title">Extra info</p>
-                                    <p class="pricing-rate"><sup>extra</sup> INFO</p>
-
-                                </div>
-
-                                <div class="pricing-list">
-                                    <ul>
-                                        <li><span>Date:</span>1234567890</li>
-                                        <li><span>Totaltrans:</span>100</li>
-                                        <li><a href="Blocks_info.html"><span>view more</span></li>
-                                    </ul>
-                                </div>
+                            <div class="pricing-list">
+                                <ul>
+                                    <li id="hash">
+                                        <span>Hashvalue:</span>1234567890</li>
+                                    <li id="size">
+                                        <span>Blocksize:</span>1234567890</li>
+                                    <li id="difficulty">
+                                        <span>Difficulty:</span>1234567890</li>
+                                    <li id="miner">
+                                        <span>Minername:</span>1234567890</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
 
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="pricing-table">
+                            <div class="pricing-header">
+                                <p class="pricing-title">Miner</p>
+                                <p class="pricing-rate">
+                                    <sup>Miner</sup> ZHOU
+                                    <span>MENG</span>
+                                </p>
+
+                            </div>
+
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>
+                                        <span>Hashvalue:</span>1234567890</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="pricing-table">
+                            <div class="pricing-header">
+                                <p class="pricing-title">Extra info</p>
+                                <p class="pricing-rate">
+                                    <sup>extra</sup> INFO</p>
+
+                            </div>
+
+                            <div class="pricing-list">
+                                <ul>
+                                    <li>
+                                        <span>Date:</span>1234567890</li>
+                                    <li>
+                                        <span>Totaltrans:</span>100</li>
+                                    <li>
+                                        <a href="Blocks_info.html">
+                                            <span>view more</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-        </section>
-		<!-- Pricing Table Section End -->
-        </body>
-        </html>
+        </div>
+    </section>
+    <!-- Pricing Table Section End -->
+</body>
+
+</html>
