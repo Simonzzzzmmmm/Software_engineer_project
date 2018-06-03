@@ -18,9 +18,11 @@ body{
   padding-top: 50px;
 }
 #pricing-table .pricing {
+  position: relative;
   marign: 0;
   padding: 0;
   font-family: 'Robot', sans-serif;
+  text-align: center;
 }
 #pricing-table .pricing .pricing-table {
   padding-bottom: 30px;
@@ -32,6 +34,7 @@ body{
   text-align: center;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
+
 }
 #pricing-table .pricing .pricing-table .pricing-header .pricing-title {
   color: #ffffff;

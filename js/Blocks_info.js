@@ -7,9 +7,12 @@
 
 // 设置区块页面元素信息
 function setBlockInfo(data) {
-    console.log(data);
-    $("#hash")[0].innerHTML = data.hash;
+    // console.log(data);
+    $("#hash")[0].innerText = $("#hash")[0].innerText.replace("loading", data.hash);
     $("#size")[0].innerHTML = data.size;
+    $("#timestamp")[0].innerHTML = data.timestamp;
+    $("#totalTx")[0].innerHTML = data.transactions.length;
+    $("#gas")[0].innerHTML = data.gasUsed;
     $("#difficulty")[0].innerHTML = data.difficulty;
     $("#miner")[0].innerHTML = data.miner;
 }
@@ -31,7 +34,7 @@ $(document).ready(function () {
             params: ["0x" + hex, false],
         },
         "success": function (resp) {
-            console.log(resp);
+            // console.log(resp);
             if (resp.success) {
                 // alert('Enroll successfully');
                 var obj = JSON.parse(resp.data);
