@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class=''>
+
 <head>
     <meta charset='UTF-8'>
     <script src='js/jquery.js'></script>
@@ -12,11 +13,14 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
     <link rel="stylesheet" href="css/DashBoard_tab.css"></link>
-    <script type="text/javascript" src="js/log_sign.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
     <style class="cp-pen-styles">
         @import url(http://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);
         /*@import url(http://weloveiconfonts.com/api/?family=fontawesome);*/
-        *, *:after, *:before {
+
+        *,
+        *:after,
+        *:before {
             box-sizing: border-box;
             -moz-box-sizing: border-box;
         }
@@ -87,7 +91,9 @@
             margin-bottom: 1rem;
         }
 
-        p, dl, ol {
+        p,
+        dl,
+        ol {
             line-height: 1.5;
             font-size: 1.3rem;
         }
@@ -147,31 +153,29 @@
             height: 100%;
         }
 
-        #settings:checked ~ nav [for='settings'],
-        #books:checked ~ nav [for='books'] {
+        #settings:checked~nav [for='settings'],
+        #books:checked~nav [for='books'] {
             color: #1E6743;
             font-weight: 600;
         }
 
-        #settings:checked ~ nav [for='settings'] {
-        }
+        #settings:checked~nav [for='settings'] {}
 
-        #profile:checked ~ nav [for='profile'] {
-        }
+        #profile:checked~nav [for='profile'] {}
 
-        #settings:checked ~ nav:after {
+        #settings:checked~nav:after {
             left: 0%;
             border-top: 0 none;
         }
 
-        #books:checked ~ nav:after {
+        #books:checked~nav:after {
             left: 50%;
         }
 
-        #profile:checked ~ .uno,
-        #settings:checked ~ .dos,
-        #posts:checked ~ .tres,
-        #books:checked ~ .cuatro {
+        #profile:checked~.uno,
+        #settings:checked~.dos,
+        #posts:checked~.tres,
+        #books:checked~.cuatro {
             text-align: center;
             display: block;
             transform: scale(1);
@@ -184,134 +188,122 @@
 
         a:hover {
             color: rgba(0, 0, 0, .2)
-        }</style>
+        }
+    </style>
 </head>
-<body>
-<div class="header">
-    <div class="container">
-        <div class="header__serv">
-            <h1 class="header__servName">Block_chain</h1>
-        </div>
-        <div class="header__stat">
-            <h2 class="header__statName">Miner's name</h2>
-            <div>
-                <div>
-                    <span class="header__statNumber">4269426942</span>
-                    <span class="header__statUnit"> eth</span>
-                </div>
 
-            </div>
-        </div>
-        <div class="header__stat">
-            <h2 class="header__statName">Hash value</h2>
-            <div>
-                <span class="header__statNumber">127810954</span>
-            </div>
-        </div>
-    </div>
-    <nav style="height: 100px">
-        <label for="profile" class="fontawesome-align-justify">Transaction</label>
-        <label for="settings" class='fontawesome-film'>Blocks</label>
-        <label for="books" class='fontawesome-list-alt'>Make deal</label>
-    </nav>
-</div>
-<section style="width: 100%">
-    <input type="radio" id="profile" value="1" name="tractor" checked='checked'/>
-    <input type="radio" id="settings" value="2" name="tractor"/>
-    <input type="radio" id="books" value="4" name="tractor"/>
-    <article class='dos fontawesome-wrench'>
+<body>
+    <div class="header">
         <div class="container">
+            <div class="header__serv">
+                <h1 class="header__servName">Block_chain</h1>
+            </div>
+            <div class="header__stat">
+                <h2 class="header__statName">Miner's name</h2>
+                <div>
+                    <div>
+                        <span class="header__statNumber">4269426942</span>
+                        <span class="header__statUnit"> eth</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header__stat">
+                <h2 class="header__statName">Hash value</h2>
+                <div>
+                    <span class="header__statNumber">127810954</span>
+                </div>
+            </div>
+        </div>
+        <nav style="height: 100px">
+            <label for="profile" class="fontawesome-align-justify">Transaction</label>
+            <label for="settings" class='fontawesome-film'>Blocks</label>
+            <label for="books" class='fontawesome-list-alt'>Make deal</label>
+        </nav>
+    </div>
+    <section style="width: 100%">
+        <input type="radio" id="profile" value="1" name="tractor" checked='checked' />
+        <input type="radio" id="settings" value="2" name="tractor" />
+        <input type="radio" id="books" value="4" name="tractor" />
+        <article class='uno'>
 
             <header class="serv__head">
                 <div>
-                            <span class="serv__status serv__status--up">
-                                &#9679;
-                            </span>
-                    <h3 class="serv__name">Block</h3>
+                    <span class="serv__status serv__status--down">
+                        &#9679;
+                    </span>
+                    <h3 class="serv__name serv__modLabel--red">Transaction</h3>
                 </div>
             </header>
-            <div class="serv__gpu">
-                <div>
-                    <div class="serv__grid-3 animation">
-                        <div class="serv__mod">
-                            <div class="serv__modLabel serv__modLabel--green">
-                                Block<a class="a_decoration" href="Blocks_info.html"><span class="header__statNumber">4269426942</span></a>
-                            </div>
-                            <div class="serv__modLabel serv__modLabel--green">
-                                Date <span class="header__statNumber">4269426942</span>
-                            </div>
-                            <div class="serv__modLabel serv__modLabel--green">
-                                Date <span class="header__statNumber">4269426942</span>
-                            </div>
-
-                        </div>
-                    </div>
+            <div class="serv__gpu" id="tx_panel">
+                <template id="tx_template">
                     <div class="serv__mod">
-                        <div class="serv__modLabel serv__modLabel--green">
-                            Block <a class="a_decoration" href="sign_up.html"><span
-                                class="header__statNumber">4269426942</span></a>
+                        <div class="serv__modLabel serv__modLabel--red">
+                            Tx
+                            <a class="a_decoration" href="sign_up.html">
+                                <span class="header__statNumber">4269426942</span>
+                            </a>
                         </div>
-                        <div class="serv__modLabel serv__modLabel--green">
-                            Date <span class="header__statNumber">4269426942</span>
+                        <div class="serv__modLabel serv__modLabel--red">
+                            Date
+                            <span class="header__statNumber">4269426942</span>
                         </div>
-                        <div class="serv__modLabel serv__modLabel--green">
-                            Date <span class="header__statNumber">4269426942</span>
+                        <div class="serv__modLabel serv__modLabel--red">
+                            Date
+                            <span class="header__statNumber">4269426942</span>
                         </div>
-
                     </div>
+                </template>
+            </div>
 
+        </article>
+        <article class='dos fontawesome-wrench'>
+            <div class="container">
 
+                <header class="serv__head">
+                    <div>
+                        <span class="serv__status serv__status--up">
+                            &#9679;
+                        </span>
+                        <h3 class="serv__name">Block</h3>
+                    </div>
+                </header>
+                <div class="serv__gpu" id="block_panel">
+                    <template id="block_template">
+                        <div class="serv__mod">
+                            <a id="a" class="a_decoration" href="Blocks_info.html">
+                                <!-- <div class="serv__modLabel serv__modLabel--green">
+                                    Block
+                                    <span id="hash" class="header__statNumber">4269426942</span>
+
+                                </div> -->
+                                <div class="serv__modLabel serv__modLabel--green">
+                                    Block
+                                    <span id="number" class="header__statNumber">4269426942</span>
+                                </div>
+                                <div class="serv__modLabel serv__modLabel--green">
+                                    Timestamp
+                                    <span id="timestamp" class="header__statNumber">4269426942</span>
+                                </div>
+                                <div class="serv__modLabel serv__modLabel--green">
+                                    Miner
+                                    <span id="miner" class="header__statNumber">4269426942</span>
+                                </div>
+
+                            </a>
+                        </div>
+                    </template>
                 </div>
             </div>
+        </article>
 
-        </div>
-    </article>
-    <article class='uno'>
-
-        <header class="serv__head">
-            <div>
-          <span class="serv__status serv__status--down">
-              &#9679;
-          </span>
-                <h3 class="serv__name serv__modLabel--red">Transaction</h3>
-            </div>
-        </header>
-        <div class="serv__gpu">
-            <div class="serv__grid-3">
-                <div class="serv__mod">
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Tx <a class="a_decoration" href="sign_up.html"><span class="header__statNumber">4269426942</span></a>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date <span class="header__statNumber">4269426942</span>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date <span class="header__statNumber">4269426942</span>
-                    </div>
-                </div>
-            </div>
-            <div class="serv__grid-3">
-                <div class="serv__mod">
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Tx <a class="a_decoration" href="sign_up.html"><span class="header__statNumber">4269426942</span></a>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date <span class="header__statNumber">4269426942</span>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date <span class="header__statNumber">4269426942</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </article>
-    <article class='cuatro fontawesome-copy'>
+        <article class='cuatro fontawesome-copy'>
             <a href="trans_make.html" class="button active">Deal?</a>
-    </article>
-</section>
+        </article>
+    </section>
 
-<script>
-</script>
+    <script>
+    </script>
 </body>
+
 </html>
