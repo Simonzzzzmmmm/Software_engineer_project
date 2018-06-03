@@ -11,39 +11,21 @@ global.ROOTPATH = __dirname;
 var
 	//设置端口
 	port = process.env.PORT || global.port,
-	secret = 'sustc',
 
 	express = require('express'),
 	UUID = require('node-uuid'),
 	http = require('http'),
-	session = require('express-session'),
-	cookieParser = require('cookie-parser')(secret),
 	app = express(),
 	bodyParser = require('body-parser'),
     http_server = http.createServer(app),
-    rpc = require('./server/js/rpc.js'),
-    myrpc = new rpc(),
-	sessionStore = new session.MemoryStore();
+    rpc = require(global.ROOTPATH + '/server/js/rpc.js');
 
 //监听端口
 http_server.listen(port);
 console.log('\t :: Express listen to port:' + port);
 
 app.use(bodyParser());
-// app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser);
 
-// 设置session
-app.use(
-	session({
-		// name: 'sessionid',
-		secret: secret,
-		cookie: { maxAge: 60 * 60 * 1000 },
-		saveUninitialized: false,
-		resave: true,
-		store: sessionStore,
-	})
-);
 
 //设置主页
 app.all('/', function (req, res) {
@@ -98,12 +80,13 @@ app.post('/enroll', function (req, res) {
 	});
 });
 
-// myrpc.eth_accounts(res);
 app.post('/rpc', function (req, res, next) {
     console.log(req);
-    var method = req.body.method;
-    var params = req.body.params;
-    eval("myrpc." + method + "(res, params);");
+    // var method = req.body.method;
+	// var params = req.body.params;
+	// rpc.single_post(res, method, params);
+
+	rpc.getBlockPage(res);
 });
 
 //监听/×文件
@@ -115,14 +98,4 @@ app.all('/*', function (req, res, next) {
     } else {
         res.end();
     }
-    ;
 });
-
-
-function findCookie(handshake) {
-	var key = 'connect.sid';
-	if (handshake)
-		return (handshake.secureCookies && handshake.secureCookies[key]) ||
-			(handshake.signedCookies && handshake.signedCookies[key]) ||
-			(handshake.cookies && handshake.cookies[key]);
-}
