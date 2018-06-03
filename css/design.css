@@ -190,7 +190,7 @@ main {
 }
 .table_layout {
 
-	height: 400px;
+	height: 500px;
 	background-color: #dbd9d7;
 	overflow-x: auto;
 	-webkit-animation: rainbow 10s infinite;
@@ -204,14 +204,9 @@ main {
 	100% {
 		background-color: #c3c1aa
 	}
-	16% {
-		background-color: #cbc787
-	}
-	32% {
-		background-color: #dbd558
-	}
-	48% {
-		background-color: #dbcc59
+
+	33% {
+		background-color: #fffaf7
 	}
 	64% {
 		background-color: #c3c1aa
@@ -222,14 +217,8 @@ main {
 	100% {
 		background-color: #c3beb4
 	}
-	16% {
-		background-color: #cbc27d
-	}
-	32% {
-		background-color: #9adb80
-	}
-	48% {
-		background-color: #cbc27d
+	33% {
+		background-color: #fffaf7
 	}
 	64% {
 		background-color: #d8d7db
