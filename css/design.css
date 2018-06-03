@@ -337,7 +337,84 @@ main {
 	-webkit-align-items: stretch;
 	align-items: stretch;
 }
-
+.next_btn {
+	position: relative;
+	background-color: #4CAF50;
+	border-radius: 20px;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+.pre_btn {
+	position: relative;
+	background-color: #4CAF50;
+	border-radius: 20px;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	text-decoration: none;
+	overflow: hidden;
+	cursor: pointer;
+}
+.next_btn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.pre_btn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+.pre_btn:after {
+	content: "";
+	background: #90EE90;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px!important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+.next_btn:after {
+	content: "";
+	background: #90EE90;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px!important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+.pre_btn:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
+.next_btn:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
 .serv__grid-3 > * {
 	display: block;
 	margin-bottom: 20px;
