@@ -238,7 +238,46 @@ body {
 .grop-from.error .form-body .form-controls input::-webkit-input-placeholder {
     color: #b71c1c;
 }
+/*颜色渐变*/
+.header {
 
+    -moz-animation: mymove 1s ease infinite;
+    background: #c7b9c6;
+    background: -moz-linear-gradient(-135deg, #944fa8, #47d0b7);
+    background: -o-linear-gradient(90deg, #496eaa, #944fa8, #a8804f, #496eaa);
+    background: -moz-linear-gradient(-135deg, #c8bcba, #47d0b7);
+    background: linear-gradient(-135deg, #944fa8, #47d0b7);
+}
+.txt2_new {
+    font-family: Poppins-Regular;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fffaf7;
+    top: 1000px;
+
+}
+@keyframes mymove
+{
+    0% {
+        background-position: 0% 0%; }
+    50% {
+        background-position: 50% 100%; }
+    100% {
+        background-position: 100% 0%; }
+}
+.goback_btn {
+
+    padding: 0.8em 2.0em;
+    font-size: 1.4rem;
+    letter-spacing: .15em;
+    font-weight: 700;
+    width: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    background-color: #c850c0;
+    border-radius: 50px;
+}
 .material-icons, .grop-from .form-action .icon-action, .icon-placeholder {
     font-family: 'Material Icons';
     font-weight: normal;

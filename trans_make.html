@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,25 @@
 
 
     <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" href="css/trans_make.css">
 
 
 </head>
 
-<body>
-
+<body class="header">
+<div style="float: right">
+    <div style="width: 100%; float: right">
+        <button id="icon-placeholder" class="goback_btn" placeholder="Go back">Go back</button>
+    </div>
+    <div style="width: 100%; float: right">
+        <a class="txt2_new" href="trans_make.html">
+            Create your Account
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
 
 <form class="grop-from" id="signup">
     <div class="form-head"><span class="text"> </span><i class="icon-placeholder"></i></div>
@@ -24,14 +35,13 @@
             <input id="control-value" placeholder="Value"/>
             <input id="control-account" placeholder="Account"/>
             <input id="control-password" placeholder="Password" type="password"/>
-            <input id="control-password-repeat" placeholder="Confirm Password" type="password"/>
         </div>
-    </div><a class="form-action"><i class="icon-action"></i></a>
+    </div>
+    <a class="form-action"><i class="icon-action"></i></a>
 </form>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script  src="js/index.js"></script>
-
-
+<script src="js/index.js"></script>
 
 
 </body>

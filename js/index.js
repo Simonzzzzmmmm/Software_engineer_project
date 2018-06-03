@@ -22,10 +22,10 @@ $('.form-head').click(function(){
         $('.grop-from').attr('id' , 'name');
         $('.icon-action').addClass('back');
     }
-    else if($(this).closest('.grop-from').attr('id')=='success'){
-        $('.grop-from').attr('id' , 'signup');
-        $('input').val('');
-    }
+    // else if($(this).closest('.grop-from').attr('id')=='success'){
+    //     $('.grop-from').attr('id' , 'signup');
+    //     $('input').val('');
+    // }
 
 });
 
@@ -49,9 +49,6 @@ $('.form-action').click(function(){
                 form_id = "password";
                 break;
             case "password":
-                form_id = "password-repeat";
-                break;
-            case "password-repeat":
                 form_id = "success";
                 break;
             case "success":
@@ -61,7 +58,6 @@ $('.form-action').click(function(){
         $('.icon-action').addClass('back');
 
     }
-
     else{
         switch (form_id) {
             case 'name':
@@ -76,9 +72,6 @@ $('.form-action').click(function(){
                 break;
             case "password":
                 form_id = "account";
-                break;
-            case "password-repeat":
-                form_id = "password";
                 break;
              case "success":
                  window.location.href = "DashBoard2.html";
@@ -103,4 +96,4 @@ $('input').keyup(function(){
     }
 
 
-})
+});
