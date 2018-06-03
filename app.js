@@ -31,7 +31,7 @@ app.use(bodyParser());
 app.all('/', function (req, res) {
 	// console.log(req);
 	// console.log(res);
-    res.sendfile('/DashBoard2.html', { root: __dirname });
+    res.sendfile('/Main_panel.html', { root: __dirname });
 });
 
 
