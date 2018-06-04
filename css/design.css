@@ -157,10 +157,11 @@ body {
 }
 
 .header__statNumber {
-	color: #282828;
+	color: #000000;
 	letter-spacing: 0.9px;
 	font-weight: bold;
 	font-size: 20px;
+	text-align: left;
 	line-height: 27px;
 }
 
@@ -185,8 +186,8 @@ main {
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }
 .a_decoration {
-    color: blue;
-    text-decoration:none;
+    color: #c850c0;
+    text-decoration-color: #c850c0;
 }
 .table_layout {
 
@@ -461,8 +462,8 @@ main {
 }
 
 .serv__modLabel {
-	color: #282828;
-	text-align: right;
+	color: #000000;
+	text-align: left;
 	letter-spacing: 0.9px;
 	font-size: 20px;
 	line-height: 30px;
