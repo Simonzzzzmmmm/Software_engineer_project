@@ -29,6 +29,7 @@ rpc.single_post = function (res, method, params) {
 }
 
 rpc.getBlockPage = function (res) {
+    var blockPerPage = 10;
     var postData = JSON.stringify({
         jsonrpc: "2.0",
         method: "eth_blockNumber",
@@ -37,9 +38,9 @@ rpc.getBlockPage = function (res) {
     });
     var success = function (data) {
         // res.json({"success":true, "data":data});
-        var hex = JSON.parse(data).result.slice(2);
-        var num = parseInt(hex, 16);
-        rpc.getBlockByIndexes(res, 0, 10);
+        var hex = JSON.parse(data).result;
+        var num = parseInt(hex);
+        rpc.getBlockByIndexes(res, Math.max(num - blockPerPage, 0), num);
     }
     var fail = function (err) {
         res.json({ "success": false, "err": err });
@@ -47,9 +48,11 @@ rpc.getBlockPage = function (res) {
     post(postData, success, fail);
 }
 
+
 rpc.getBlockByIndexes = function (res, start, end) {
     var result = [];
     var failed = false;
+    console.log(typeof start, typeof end);
     for (let index = start; index < end; index++) {
         var hex = "0x" + index.toString(16);
         var postData = JSON.stringify({
@@ -58,8 +61,9 @@ rpc.getBlockByIndexes = function (res, start, end) {
             params: [hex, false],
             id: 1
         });
+        console.log(index, hex, typeof index);
         var success = function (data) {
-            console.log(data);
+            console.log(index, hex,  data);
             result.push(data);
             if (result.length == end - start) {
                 res.json({ "success": true, "data": result });
@@ -71,9 +75,28 @@ rpc.getBlockByIndexes = function (res, start, end) {
             }
             failed = true;
         }
-        console.log(postData);
+        // console.log(postData);
         post(postData, success, fail);
     }
+}
+
+rpc.getTxPage = function (res) {
+    var postData = JSON.stringify({
+        jsonrpc: "2.0",
+        method: "eth_blockNumber",
+        params: [],
+        id: 1
+    });
+    var success = function (data) {
+        // res.json({"success":true, "data":data});
+        var hex = JSON.parse(data).result;
+        var num = parseInt(hex);
+        rpc.getBlockByIndexes(res, 0, 10);
+    }
+    var fail = function (err) {
+        res.json({ "success": false, "err": err });
+    }
+    post(postData, success, fail);
 }
 
 function post(postData, success, fail) {

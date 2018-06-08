@@ -3,7 +3,7 @@ var os=require('os');
 //设置服务端nodejsjs参数
 
 //设置是否开启dprint
-global.dpEnable = true;
+global.dpEnable = false;
 
 //与js连接的端口
 global.port = 4004;
