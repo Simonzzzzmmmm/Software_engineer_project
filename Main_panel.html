@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class=''>
+<html class='' xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset='UTF-8'>
@@ -14,6 +14,44 @@
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
     <link rel="stylesheet" href="css/DashBoard_tab.css"></link>
     <script type="text/javascript" src="js/Main_panel.js"></script>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="table/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script src="table/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="table/vendor/bootstrap/js/popper.js"></script>
+    <script src="table/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="table/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="table/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function () {
+            var ps = new PerfectScrollbar(this);
+
+            $(window).on('resize', function () {
+                ps.update();
+            })
+        });
+
+
+    </script>
+    <!--===============================================================================================-->
+    <script src="table/js/table_main.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="table/css/table_util.css">
+    <link rel="stylesheet" type="text/css" href="table/css/table_main.css">
     <style class="cp-pen-styles">
         @import url(http://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);
         /*@import url(http://weloveiconfonts.com/api/?family=fontawesome);*/
@@ -195,8 +233,8 @@
 </head>
 
 <body>
-<div class="header">
-    <div class="container">
+<div class="header body_gif">
+    <div class="container ">
         <div class="header__serv">
             <h1 class="header__servName">Block_chain</h1>
         </div>
@@ -218,90 +256,155 @@
         </div>
     </div>
     <nav style="height: 100px">
-        <label for="profile" class="fontawesome-align-justify">Transaction</label>
+        <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
         <label for="settings" class='fontawesome-film'>Blocks</label>
         <label for="books" class='fontawesome-list-alt'>Make deal</label>
     </nav>
-</div>
-<section style="width: 100%">
+
+
+<section style="width: 100%" class="body_gif">
     <input type="radio" id="profile" value="1" name="tractor" checked='checked'/>
     <input type="radio" id="settings" value="2" name="tractor"/>
     <input type="radio" id="books" value="4" name="tractor"/>
     <article class='uno'>
+        <!--<div class="serv__gpu" id="tx_panel">-->
+            <!--<template id="tx_template">-->
+                <!--<div class="serv__mod">-->
+                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                        <!--Tx-->
+                        <!--<a class="a_decoration" href="sign_up.html">-->
+                            <!--<span class="header__statNumber">4269426942</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                        <!--Date-->
+                        <!--<span class="header__statNumber">4269426942</span>-->
+                    <!--</div>-->
+                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                        <!--Date-->
+                        <!--<span class="header__statNumber">4269426942</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</template>-->
+        <!--</div>-->
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100 ver5 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks
+                                        No.
+                                    </th>
+                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
+                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
+                                    <!--<th class="cell100 column4" style="text-align: center"></th>-->
+                                    <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
 
-        <header class="serv__head">
-            <div>
-                    <span class="serv__status serv__status--down">
-                        &#9679;
-                    </span>
-                <h3 class="serv__name serv__modLabel--red">Transaction</h3>
-            </div>
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                <!--这里开始动态添加数据-->
 
-        </header>
-        <div class="serv__gpu" id="tx_panel">
-            <template id="tx_template">
-                <div class="serv__mod">
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Tx
-                        <a class="a_decoration" href="sign_up.html">
-                            <span class="header__statNumber">4269426942</span>
-                        </a>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date
-                        <span class="header__statNumber">4269426942</span>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--red">
-                        Date
-                        <span class="header__statNumber">4269426942</span>
+                                <tr  class="row100 body">
+                                    <td class="cell100 column1">
+                                        <a id="a" class="a_decoration" href="Blocks_info.html">
+                                            ssssss
+                                        </a>
+                                    </td>
+                                    <td class="cell100 column2">Boxing</td>
+                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </template>
+            </div>
         </div>
 
     </article>
     <article class='dos fontawesome-wrench'>
-        <header class="serv__head">
-            <div>
-                    <span class="serv__status serv__status--up">
-                        &#9679;
-                    </span>
-                <h3 class="serv__name">Block</h3>
-            </div>
-            <div>
+        <div class="limiter">
+            <div class="container-table100">
                 <button id="pre" class="pre_btn">
                     <span>Pre</span>
                 </button>
                 <button id="next" class="next_btn">
                     <span>Next</span>
                 </button>
-            </div>
-        </header>
-        <div class="serv__gpu" id="block_panel">
-            <template id="block_template">
-                <div class="serv__mod">
-                    <div class="serv__modLabel serv__modLabel--green">
-                        Block
-                        <a id="a" class="a_decoration" href="Blocks_info.html">
-                            <span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"
-                                4269426942
-                            </span>
-                        </a>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--green">
-                        Timestamp
-                        <span id="timestamp" class="header__statNumber">
-                            4269426942
-                        </span>
-                    </div>
-                    <div class="serv__modLabel serv__modLabel--green">
-                        Miner
-                        <span id="miner" class="header__statNumber">4269426942</span>
-                    </div>
+                <div class="wrap-table100">
+                    <div class="table100 ver5 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks
+                                        No.
+                                    </th>
+                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
+                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
+                                    <!--<th class="cell100 column4" style="text-align: center"></th>-->
+                                    <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
 
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody>
+                                <!--这里开始动态添加数据-->
+
+                                <tr id="block_id" class="row100 body">
+                                    <td class="cell100 column1">
+                                        <a id="a" class="a_decoration" href="Blocks_info.html">
+                                            ssssss
+                                        </a>
+                                    </td>
+                                    <td class="cell100 column2">Boxing</td>
+                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </template>
+            </div>
         </div>
+        <!--<div class="serv__gpu" id="block_panel">-->
+        <!--<template id="block_template">-->
+        <!--<div class="serv__mod">-->
+        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+        <!--Block-->
+        <!--<a id="a" class="a_decoration" href="Blocks_info.html">-->
+        <!--<span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"-->
+        <!--4269426942-->
+        <!--</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+        <!--Timestamp-->
+        <!--<span id="timestamp" class="header__statNumber">-->
+        <!--4269426942-->
+        <!--</span>-->
+        <!--</div>-->
+        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+        <!--Miner-->
+        <!--<span id="miner" class="header__statNumber">4269426942</span>-->
+        <!--</div>-->
+
+        <!--</div>-->
+        <!--</template>-->
+        <!--</div>-->
     </article>
     <article class='cuatro fontawesome-copy'>
         <a href="trans_make.html" class="button active">Deal?</a>
@@ -310,6 +413,7 @@
 
 <script>
 </script>
+</div >
 </body>
 
 </html>
