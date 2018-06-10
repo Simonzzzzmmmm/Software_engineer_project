@@ -76,8 +76,9 @@ th,td {
     border-collapse: collapse;
     font-family: Futura, Arial, sans-serif;
     position: absolute;
-    left:250px;
-    width :1000px;
+    left: 25px;
+    right: 25px;
+    /* width :800px; */
 
 }
 .block_info_serv__head {
