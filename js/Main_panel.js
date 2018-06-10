@@ -1,4 +1,35 @@
 
+var max_height;
+var current_height;
+var blockPerPage = 10;
+
+function hex2int(hex) {
+    var num = parseInt(hex);
+    return num;
+}
+
+function parseArray(datas) {
+    for (let i = 0; i < datas.length; i++) {
+        var data = datas[i];
+        var obj = JSON.parse(data);
+        datas[i] = obj.result;
+    }
+}
+
+function bubbleSort(arr) {
+    var len = arr.length;
+    for (var i = 0; i < len; i++) {
+        for (var j = 0; j < len - 1 - i; j++) {
+            if (hex2int(arr[j].number) < hex2int(arr[j+1].number)) {        //相邻元素两两对比
+                var temp = arr[j+1];        //元素交换
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
 function BlockPage() {
     $.ajax({
         "type": 'get',
@@ -8,11 +39,64 @@ function BlockPage() {
         "success": function (resp) {
             console.log(resp);
             if (resp.success) {
-                alert('Enroll successfully');
-                alert(resp.data);
-                for (let index = 0; index < resp.data.length; index++) {
-                    AddBlock(resp.data[index]);
-                }
+                // alert('Enroll successfully');
+                // alert(resp.data);
+                var datas = resp.data;
+                parseArray(datas);
+                datas = bubbleSort(datas);
+                max_height = hex2int(datas[0].number);
+                current_height = max_height;
+                AddBlocks(datas);
+            } else {
+                alert('RPC failed');
+            }
+        },
+        "error": function (emsg) {
+            console.log(emsg);
+            alert('ajax failed');
+        }
+    });
+}
+
+function PrevBlockPage() {
+    if (current_height + blockPerPage > max_height) {
+        return;
+    }
+    var start = current_height + 1;
+    var end = current_height + blockPerPage + 1;
+    UpdateBlockPage(start, end);
+}
+
+function NextBlockPage() {
+    if (current_height - blockPerPage < 0) {
+        return;
+    }
+    var start = Math.max(current_height - 2 * blockPerPage + 1);
+    var end = current_height - blockPerPage + 1;
+    console.log(typeof start, typeof end);
+    UpdateBlockPage(start, end);
+}
+
+function ClearBlockpage() {
+    $(".block").remove();
+}
+
+
+function UpdateBlockPage(start, end) {
+    $.ajax({
+        "type": 'post',
+        "url": "/UpdateBlockPage",
+        "dataType": "json",
+        "data": {start:start, end:end},
+        "success": function (resp) {
+            console.log(resp);
+            if (resp.success) {
+                var datas = resp.data;
+                parseArray(datas);
+                datas = bubbleSort(datas);
+                current_height = hex2int(datas[0].number);
+                ClearBlockpage();
+                AddBlocks(datas);
             } else {
                 alert('RPC failed');
             }
@@ -25,45 +109,66 @@ function BlockPage() {
 }
 
 // 将区块模板添加进区块面板
-function AddBlock(data) {
-    console.log(data);
-    var obj = JSON.parse(data);
-    // var hash = obj.result.hash;
-    var number = obj.result.number;
-    var timestamp = obj.result.timestamp;
-    var miner = obj.result.miner;
-    var block = document.querySelector('#block_template');
-    // block.content.querySelector('#hash').innerHTML = hash;
-    block.content.querySelector('#number').innerHTML = number;
-    block.content.querySelector('#timestamp').innerHTML = timestamp;
-    block.content.querySelector('#miner').innerHTML = miner;
-    block.content.querySelector('#a').href = "/Block_info/" + number;
-    $("#block_panel").append(block.content.cloneNode(true));
+function AddBlocks(datas) {
+    console.log(datas);
+
+    for (let index = 0; index < datas.length; index++) {
+        var obj = datas[index];
+        // var obj = JSON.parse(data);
+        // var hash = obj.hash;
+        var number = obj.number;
+        var timestamp = obj.timestamp;
+        var miner = obj.miner;
+        var block = document.querySelector('#block_template');
+        // block.content.querySelector('#hash').innerHTML = hash;
+        block.content.querySelector('#number').innerHTML = number;
+        block.content.querySelector('#timestamp').innerHTML = timestamp;
+        block.content.querySelector('#miner').innerHTML = miner;
+        block.content.querySelector('#a').href = "/Block_info/" + number;
+        $("#block_panel").append(block.content.cloneNode(true));
+    }
 }
 
 function TxPage() {
     $.ajax({
-        "type": 'post',
-        "url": "/TxPage",
+        "type": 'get',
+        "url": "/BlockPage",
         "dataType": "json",
-        "data": {
-            method: "eth_accounts",
-            params: [],
-        },
+        "data": {},
         "success": function (resp) {
             console.log(resp);
             if (resp.success) {
                 alert('Enroll successfully');
                 alert(resp.data);
+                for (let index = 0; index < resp.data.length; index++) {
+                    AddTx(resp.data[index]);
+                }
             } else {
-                alert('Enroll failed! Username existed');
+                alert('RPC failed');
             }
         },
         "error": function (emsg) {
             console.log(emsg);
-            alert('Post failed');
+            alert('ajax failed');
         }
     });
+}
+
+// 将交易模板添加进交易面板
+function AddTx(data) {
+    console.log(data);
+    var obj = JSON.parse(data);
+    // var hash = obj.result.hash;
+    var hash = obj.result.hash;
+    var timestamp = obj.result.timestamp;
+    var miner = obj.result.miner;
+    var tx = document.querySelector('#tx_template');
+    // block.content.querySelector('#hash').innerHTML = hash;
+    tx.content.querySelector('#hash').innerHTML = hash;
+    tx.content.querySelector('#timestamp').innerHTML = timestamp;
+    tx.content.querySelector('#miner').innerHTML = miner;
+    tx.content.querySelector('#a').href = "/Tx_info/" + number;
+    $("#tx_panel").append(tx.content.cloneNode(true));
 }
 
 function rpc() {

@@ -1,6 +1,7 @@
 // $(".myclass") 获取所有class="myclass"的元素数组；
 // $("#myid") 获取id="myid"的元素数组；长度为1；
 // var hex = num.tostring(16); 十进制int转十六进制字符串；
+// var num = parseInt(hex); 0x前缀十六进制字符串转十进制int；
 // var num = parseInt(hex, 16); 十六进制字符串转十进制int；
 // var json = JSON.parse(json_string); 字符串转json
 // var json_string = JSON.stringify(json); json转字符串
