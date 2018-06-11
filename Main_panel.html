@@ -231,7 +231,7 @@
 </head>
 
 <body>
-    <div class="header body_gif" style="left:0;">
+    <div class="header body_gif">
         <div class="container ">
             <div class="header__serv">
                 <h1 class="header__servName">Block_chain</h1>
@@ -265,26 +265,6 @@
             <input type="radio" id="settings" value="2" name="tractor" />
             <input type="radio" id="books" value="4" name="tractor" />
             <article class='uno'>
-                <!--<div class="serv__gpu" id="tx_panel">-->
-                <!--<template id="tx_template">-->
-                <!--<div class="serv__mod">-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                <!--Tx-->
-                <!--<a class="a_decoration" href="sign_up.html">-->
-                <!--<span class="header__statNumber">4269426942</span>-->
-                <!--</a>-->
-                <!--</div>-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                <!--Date-->
-                <!--<span class="header__statNumber">4269426942</span>-->
-                <!--</div>-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                <!--Date-->
-                <!--<span class="header__statNumber">4269426942</span>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</template>-->
-                <!--</div>-->
                 <div class="limiter">
                     <div class="container-table100">
                         <div class="wrap-table100">
@@ -297,8 +277,6 @@
                                                 </th>
                                                 <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
                                                 <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
-                                                <!--<th class="cell100 column4" style="text-align: center"></th>-->
-                                                <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
                                             </tr>
                                         </thead>
                                     </table>
@@ -308,17 +286,17 @@
                                     <table>
                                         <tbody>
                                             <!--这里开始动态添加数据-->
-
-                                            <tr class="row100 body">
-                                                <td class="cell100 column1">
-                                                    <a id="a" class="a_decoration" href="Blocks_info.html">
-                                                        ssssss
-                                                    </a>
-                                                </td>
-                                                <td class="cell100 column2">Boxing</td>
-                                                <td class="cell100 column3">9:00 AM - 11:00 AM</td>
-
-                                            </tr>
+                                            <template id="tx_template">
+                                                <tr class="row100 body">
+                                                    <td class="cell100 column1">
+                                                        <a id="a" class="a_decoration" href="Blocks_info.html">
+                                                            ssssss
+                                                        </a>
+                                                    </td>
+                                                    <td class="cell100 column2">Boxing</td>
+                                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                                </tr>
+                                            </template>
                                         </tbody>
                                     </table>
                                 </div>
@@ -345,10 +323,8 @@
                                             <tr class="row100 head">
                                                 <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
                                                 </th>
+                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Timestamp</th>
                                                 <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
-                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
-                                                <!--<th class="cell100 column4" style="text-align: center"></th>-->
-                                                <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
                                             </tr>
                                         </thead>
                                     </table>
@@ -356,19 +332,19 @@
 
                                 <div class="table100-body js-pscroll">
                                     <table>
-                                        <tbody>
+                                        <tbody id="block_panel">
                                             <!--这里开始动态添加数据-->
-
-                                            <tr id="block_id" class="row100 body">
-                                                <td class="cell100 column1">
-                                                    <a id="a" class="a_decoration" href="Blocks_info.html">
-                                                        ssssss
-                                                    </a>
-                                                </td>
-                                                <td class="cell100 column2">Boxing</td>
-                                                <td class="cell100 column3">9:00 AM - 11:00 AM</td>
-
-                                            </tr>
+                                            <template id="block_template">
+                                                <tr id="block_id" class="row100 body block">
+                                                    <td class="cell100 column1">
+                                                        <a id="number" class="a_decoration" href="Blocks_info.html">
+                                                            loading
+                                                        </a>
+                                                    </td>
+                                                    <td id="timestamp" class="cell100 column2">loading</td>
+                                                    <td id="miner" class="cell100 column3">loading</td>
+                                                </tr>
+                                            </template>
                                         </tbody>
                                     </table>
                                 </div>
@@ -376,31 +352,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="serv__gpu" id="block_panel">-->
-                <!--<template id="block_template">-->
-                <!--<div class="serv__mod">-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-                <!--Block-->
-                <!--<a id="a" class="a_decoration" href="Blocks_info.html">-->
-                <!--<span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"-->
-                <!--4269426942-->
-                <!--</span>-->
-                <!--</a>-->
-                <!--</div>-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-                <!--Timestamp-->
-                <!--<span id="timestamp" class="header__statNumber">-->
-                <!--4269426942-->
-                <!--</span>-->
-                <!--</div>-->
-                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-                <!--Miner-->
-                <!--<span id="miner" class="header__statNumber">4269426942</span>-->
-                <!--</div>-->
-
-                <!--</div>-->
-                <!--</template>-->
-                <!--</div>-->
             </article>
             <article class='cuatro fontawesome-copy'>
                 <a href="trans_make.html" class="button active">Deal?</a>

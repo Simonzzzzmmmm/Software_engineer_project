@@ -124,7 +124,7 @@ function AddBlocks(datas) {
         block.content.querySelector('#number').innerHTML = number;
         block.content.querySelector('#timestamp').innerHTML = timestamp;
         block.content.querySelector('#miner').innerHTML = miner;
-        block.content.querySelector('#a').href = "/Block_info/" + number;
+        block.content.querySelector('#number').href = "/Block_info/" + number;
         $("#block_panel").append(block.content.cloneNode(true));
     }
 }

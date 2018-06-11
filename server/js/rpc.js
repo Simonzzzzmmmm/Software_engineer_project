@@ -52,7 +52,7 @@ rpc.getBlockPage = function (res) {
 rpc.getBlockByIndexes = function (res, start, end) {
     var result = [];
     var failed = false;
-    console.log(typeof start, typeof end);
+    // console.log(typeof start, typeof end);
     for (let index = start; index < end; index++) {
         var hex = "0x" + index.toString(16);
         var postData = JSON.stringify({
