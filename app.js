@@ -90,6 +90,12 @@ app.post('/rpc', function (req, res, next) {
 	rpc.single_post(res, method, params);
 });
 
+// 获取主页多个交易信息
+app.get('/TxPage', function (req, res, next) {
+	console.log(req);
+	rpc.getTxPage(res);
+});
+
 // 获取主页多个区块信息
 app.get('/BlockPage', function (req, res, next) {
 	console.log(req);

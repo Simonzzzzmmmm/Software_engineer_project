@@ -58,7 +58,7 @@ rpc.getBlockByIndexes = function (res, start, end) {
         var postData = JSON.stringify({
             jsonrpc: "2.0",
             method: "eth_getBlockByNumber",
-            params: [hex, false],
+            params: [hex, true],
             id: 1
         });
         console.log(index, hex, typeof index);

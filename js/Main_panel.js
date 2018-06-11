@@ -46,6 +46,9 @@ function BlockPage() {
                 datas = bubbleSort(datas);
                 max_height = hex2int(datas[0].number);
                 current_height = max_height;
+                $('#block_height')[0].innerHTML = max_height;
+                $('#difficulty')[0].innerHTML = datas[0].difficulty;
+                SetTxPage(datas);
                 AddBlocks(datas);
             } else {
                 alert('RPC failed');
@@ -57,6 +60,7 @@ function BlockPage() {
         }
     });
 }
+
 
 function PrevBlockPage() {
     if (current_height + blockPerPage > max_height) {
@@ -71,7 +75,7 @@ function NextBlockPage() {
     if (current_height - blockPerPage < 0) {
         return;
     }
-    var start = Math.max(current_height - 2 * blockPerPage + 1);
+    var start = Math.max(current_height - 2 * blockPerPage + 1, 0);
     var end = current_height - blockPerPage + 1;
     console.log(typeof start, typeof end);
     UpdateBlockPage(start, end);
@@ -126,6 +130,29 @@ function AddBlocks(datas) {
         block.content.querySelector('#miner').innerHTML = miner;
         block.content.querySelector('#number').href = "/Block_info/" + number;
         $("#block_panel").append(block.content.cloneNode(true));
+    }
+}
+
+function SetTxPage(blocks) {
+    console.log(blocks);
+
+    for (let index = 0; index < blocks.length; index++) {
+        var block = blocks[index];
+        var txs = block.transactions;
+        for (let ti = 0; ti < txs.length; ti++) {
+            const tx = txs[ti];
+            var hash = tx.hash;
+            var from = tx.from;
+            var to = tx.to;
+            var amount = tx.value;
+            var tx_template = document.querySelector('#tx_template');
+            tx_template.content.querySelector('#transaction').innerHTML = hash;
+            tx_template.content.querySelector('#from').innerHTML = from;
+            tx_template.content.querySelector('#to').innerHTML = to;
+            tx_template.content.querySelector('#amount').innerHTML = amount;
+            tx_template.content.querySelector('#transaction').href = "/Tx_info/" + hash;
+            $("#tx_panel").append(tx_template.content.cloneNode(true));
+        }
     }
 }
 

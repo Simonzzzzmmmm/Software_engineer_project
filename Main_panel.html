@@ -234,24 +234,23 @@
     <div class="header body_gif">
         <div class="container ">
             <div class="header__serv">
-                <h1 class="header__servName">Block_chain</h1>
+                <h1 class="header__servName">BlockChain</h1>
             </div>
             <div class="header__stat">
-                <h2 class="header__statName">Miner's name</h2>
+                <h2 class="header__statName">Block Height</h2>
+                <div>
+                    <span id="block_height" class="header__statNumber">loading</span>
+                </div>
+            </div>
+            <div class="header__stat">
+                <h2 class="header__statName">Difficulty</h2>
                 <div>
                     <div>
-                        <span class="header__statNumber">4269426942</span>
-                        <span class="header__statUnit"> eth</span>
+                        <span id="difficulty" class="header__statNumber">loading</span>
                     </div>
+                </div>
+            </div>
 
-                </div>
-            </div>
-            <div class="header__stat">
-                <h2 class="header__statName">Hash value</h2>
-                <div>
-                    <span class="header__statNumber">127810954</span>
-                </div>
-            </div>
         </div>
         <nav style="height: 100px">
             <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
@@ -273,10 +272,11 @@
                                     <table>
                                         <thead>
                                             <tr class="row100 head">
-                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
+                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Transaction
                                                 </th>
-                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
-                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
+                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">From</th>
+                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">To</th>
+                                                <th class="cell100 column4" style="text-align: center; font-size: 25px;">Amount</th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -284,17 +284,18 @@
 
                                 <div class="table100-body js-pscroll">
                                     <table>
-                                        <tbody>
+                                        <tbody id="tx_panel">
                                             <!--这里开始动态添加数据-->
                                             <template id="tx_template">
                                                 <tr class="row100 body">
                                                     <td class="cell100 column1">
-                                                        <a id="a" class="a_decoration" href="Blocks_info.html">
-                                                            ssssss
+                                                        <a id="transaction" class="a_decoration" href="Tx_info.html">
+                                                            loading
                                                         </a>
                                                     </td>
-                                                    <td class="cell100 column2">Boxing</td>
-                                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                                    <td id="from" class="cell100 column2">loading</td>
+                                                    <td id="to" class="cell100 column3">loading</td>
+                                                    <td id="amount" class="cell100 column4">loading</td>
                                                 </tr>
                                             </template>
                                         </tbody>
