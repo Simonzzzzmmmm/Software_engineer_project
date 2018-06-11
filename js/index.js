@@ -74,7 +74,7 @@ $('.form-action').click(function(){
                 form_id = "account";
                 break;
              case "success":
-                window.location.href = "Main_panel.html";
+                 window.location.href = "Main_panel.html";
                 break;
         }
         $('.icon-action').removeClass('back');

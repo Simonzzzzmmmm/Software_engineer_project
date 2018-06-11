@@ -124,11 +124,10 @@ body {
     display: block;
 }
 .grop-from#signup .form-head .text:before {
-    content: 'Start A Transaction';
-    right: 20px;
+    content: 'Do deal';
 }
 .grop-from#signup .form-action {
-    right: 10px;
+    right: 100px;
     background: none;
     line-height: 65px;
 }
@@ -141,7 +140,7 @@ body {
 }
 .grop-from#success .form-head {
     width: 100%;
-    background: rgb(7, 182, 97);
+    background: #00E676;
 }
 .grop-from#success .form-head .icon-placeholder {
     display: none;
@@ -150,10 +149,10 @@ body {
     display: block;
 }
 .grop-from#success .form-head .text:before {
-    content: 'Trade Successfully';
+    content: 'Success';
 }
 .grop-from#success .form-action {
-    right: 10px;
+    right: 90px;
     background: none;
     line-height: 65px;
 }
@@ -255,10 +254,7 @@ body {
     line-height: 1.5;
     color: #fffaf7;
     top: 1000px;
-    text-decoration:none;
-}
-.gobacktxt_new {
-    text-decoration:none;
+
 }
 @keyframes mymove
 {
