@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/DashBoard_tab.css"></link>
     <script type="text/javascript" src="js/Main_panel.js"></script>
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="table/images/icons/favicon.ico"/>
+    <link rel="icon" type="image/png" href="table/images/icons/favicon.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="table/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -191,31 +191,29 @@
             height: 100%;
         }
 
-        #settings:checked ~ nav [for='settings'],
-        #books:checked ~ nav [for='books'] {
+        #settings:checked~nav [for='settings'],
+        #books:checked~nav [for='books'] {
             color: #1E6743;
             font-weight: 600;
         }
 
-        #settings:checked ~ nav [for='settings'] {
-        }
+        #settings:checked~nav [for='settings'] {}
 
-        #profile:checked ~ nav [for='profile'] {
-        }
+        #profile:checked~nav [for='profile'] {}
 
-        #settings:checked ~ nav:after {
+        #settings:checked~nav:after {
             left: 0%;
             border-top: 0 none;
         }
 
-        #books:checked ~ nav:after {
+        #books:checked~nav:after {
             left: 50%;
         }
 
-        #profile:checked ~ .uno,
-        #settings:checked ~ .dos,
-        #posts:checked ~ .tres,
-        #books:checked ~ .cuatro {
+        #profile:checked~.uno,
+        #settings:checked~.dos,
+        #posts:checked~.tres,
+        #books:checked~.cuatro {
             text-align: center;
             display: block;
             transform: scale(1);
@@ -233,215 +231,185 @@
 </head>
 
 <body>
-<div class="header body_gif">
-    <div class="container ">
-        <div class="header__serv">
-            <h1 class="header__servName">Block_chain</h1>
-        </div>
-        <div class="header__stat">
-            <h2 class="header__statName">Miner's name</h2>
-            <div>
+    <div class="header body_gif" style="left:0;">
+        <div class="container ">
+            <div class="header__serv">
+                <h1 class="header__servName">Block_chain</h1>
+            </div>
+            <div class="header__stat">
+                <h2 class="header__statName">Miner's name</h2>
                 <div>
-                    <span class="header__statNumber">4269426942</span>
-                    <span class="header__statUnit"> eth</span>
+                    <div>
+                        <span class="header__statNumber">4269426942</span>
+                        <span class="header__statUnit"> eth</span>
+                    </div>
+
                 </div>
-
+            </div>
+            <div class="header__stat">
+                <h2 class="header__statName">Hash value</h2>
+                <div>
+                    <span class="header__statNumber">127810954</span>
+                </div>
             </div>
         </div>
-        <div class="header__stat">
-            <h2 class="header__statName">Hash value</h2>
-            <div>
-                <span class="header__statNumber">127810954</span>
-            </div>
-        </div>
-    </div>
-    <nav style="height: 100px">
-        <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
-        <label for="settings" class='fontawesome-film'>Blocks</label>
-        <label for="books" class='fontawesome-list-alt'>Make deal</label>
-    </nav>
+        <nav style="height: 100px">
+            <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
+            <label for="settings" class='fontawesome-film'>Blocks</label>
+            <label for="books" class='fontawesome-list-alt'>Make deal</label>
+        </nav>
 
 
-<section style="width: 100%" class="body_gif">
-    <input type="radio" id="profile" value="1" name="tractor" checked='checked'/>
-    <input type="radio" id="settings" value="2" name="tractor"/>
-    <input type="radio" id="books" value="4" name="tractor"/>
-    <article class='uno'>
-        <!--<div class="serv__gpu" id="tx_panel">-->
-            <!--<template id="tx_template">-->
+        <section style="width: 100%" class="body_gif">
+            <input type="radio" id="profile" value="1" name="tractor" checked='checked' />
+            <input type="radio" id="settings" value="2" name="tractor" />
+            <input type="radio" id="books" value="4" name="tractor" />
+            <article class='uno'>
+                <!--<div class="serv__gpu" id="tx_panel">-->
+                <!--<template id="tx_template">-->
                 <!--<div class="serv__mod">-->
-                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                        <!--Tx-->
-                        <!--<a class="a_decoration" href="sign_up.html">-->
-                            <!--<span class="header__statNumber">4269426942</span>-->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                        <!--Date-->
-                        <!--<span class="header__statNumber">4269426942</span>-->
-                    <!--</div>-->
-                    <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
-                        <!--Date-->
-                        <!--<span class="header__statNumber">4269426942</span>-->
-                    <!--</div>-->
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                <!--Tx-->
+                <!--<a class="a_decoration" href="sign_up.html">-->
+                <!--<span class="header__statNumber">4269426942</span>-->
+                <!--</a>-->
                 <!--</div>-->
-            <!--</template>-->
-        <!--</div>-->
-        <div class="limiter">
-            <div class="container-table100">
-                <div class="wrap-table100">
-                    <div class="table100 ver5 m-b-110">
-                        <div class="table100-head">
-                            <table>
-                                <thead>
-                                <tr class="row100 head">
-                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks
-                                        No.
-                                    </th>
-                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
-                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
-                                </tr>
-                                </thead>
-                            </table>
-                        </div>
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                <!--Date-->
+                <!--<span class="header__statNumber">4269426942</span>-->
+                <!--</div>-->
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;red">-->
+                <!--Date-->
+                <!--<span class="header__statNumber">4269426942</span>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</template>-->
+                <!--</div>-->
+                <div class="limiter">
+                    <div class="container-table100">
+                        <div class="wrap-table100">
+                            <div class="table100 ver5 m-b-110">
+                                <div class="table100-head">
+                                    <table>
+                                        <thead>
+                                            <tr class="row100 head">
+                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
+                                                </th>
+                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
+                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
+                                                <!--<th class="cell100 column4" style="text-align: center"></th>-->
+                                                <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
 
-                        <div class="table100-body js-pscroll">
-                            <table>
-                                <tbody>
-                                <!--这里开始动态添加数据-->
+                                <div class="table100-body js-pscroll">
+                                    <table>
+                                        <tbody>
+                                            <!--这里开始动态添加数据-->
 
-                                <tr  class="row100 body">
-                                    <td class="cell100 column1">
-                                        <a id="a" class="a_decoration" href="Blocks_info.html">
-                                            ssssss
-                                        </a>
-                                    </td>
-                                    <td class="cell100 column2">Boxing</td>
-                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                            <tr class="row100 body">
+                                                <td class="cell100 column1">
+                                                    <a id="a" class="a_decoration" href="Blocks_info.html">
+                                                        ssssss
+                                                    </a>
+                                                </td>
+                                                <td class="cell100 column2">Boxing</td>
+                                                <td class="cell100 column3">9:00 AM - 11:00 AM</td>
 
-                                </tr>
-                                </tbody>
-                            </table>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-    </article>
-    <article class='dos fontawesome-wrench'>
-<<<<<<< HEAD
-        <div class="limiter">
-            <div class="container-table100">
-                <button id="pre" class="pre_btn">
-=======
-        <header class="serv__head">
-            <div>
-                    <span class="serv__status serv__status--up">
-                        &#9679;
-                    </span>
-                <h3 class="serv__name">Block</h3>
-            </div>
-            <div>
-                <button id="pre" class="pre_btn" onclick="PrevBlockPage()">
-<<<<<<< HEAD
->>>>>>> 51a62cf629ea3882078648d780a9db18f37a4709
-=======
->>>>>>> 51a62cf629ea3882078648d780a9db18f37a4709
-                    <span>Pre</span>
-                </button>
-                <button id="next" class="next_btn" onclick="NextBlockPage()">
-                    <span>Next</span>
-                </button>
-<<<<<<< HEAD
-                <div class="wrap-table100">
-                    <div class="table100 ver5 m-b-110">
-                        <div class="table100-head">
-                            <table>
-                                <thead>
-                                <tr class="row100 head">
-                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks
-                                        No.
-                                    </th>
-                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
-                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
-                                    <!--<th class="cell100 column4" style="text-align: center"></th>-->
-                                    <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
-                                </tr>
-                                </thead>
-                            </table>
+            </article>
+            <article class='dos fontawesome-wrench'>
+                <div class="limiter">
+                    <div class="container-table100">
+                        <button id="pre" class="pre_btn" onclick="PrevBlockPage()">
+                            <span>Pre</span>
+                        </button>
+                        <button id="next" class="next_btn" onclick="NextBlockPage()">
+                            <span>Next</span>
+                        </button>
+                        <div class="wrap-table100">
+                            <div class="table100 ver5 m-b-110">
+                                <div class="table100-head">
+                                    <table>
+                                        <thead>
+                                            <tr class="row100 head">
+                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
+                                                </th>
+                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
+                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Date</th>
+                                                <!--<th class="cell100 column4" style="text-align: center"></th>-->
+                                                <!--<th class="cell100 column5" style="text-align: center">Spots</th>-->
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+
+                                <div class="table100-body js-pscroll">
+                                    <table>
+                                        <tbody>
+                                            <!--这里开始动态添加数据-->
+
+                                            <tr id="block_id" class="row100 body">
+                                                <td class="cell100 column1">
+                                                    <a id="a" class="a_decoration" href="Blocks_info.html">
+                                                        ssssss
+                                                    </a>
+                                                </td>
+                                                <td class="cell100 column2">Boxing</td>
+                                                <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="table100-body js-pscroll">
-                            <table>
-                                <tbody>
-                                <!--这里开始动态添加数据-->
-
-                                <tr id="block_id" class="row100 body">
-                                    <td class="cell100 column1">
-                                        <a id="a" class="a_decoration" href="Blocks_info.html">
-                                            ssssss
-                                        </a>
-                                    </td>
-                                    <td class="cell100 column2">Boxing</td>
-                                    <td class="cell100 column3">9:00 AM - 11:00 AM</td>
-
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-=======
-            </div>
-        </header>
-        <div class="serv__gpu" id="block_panel">
-            <template id="block_template">
-                <div class="serv__mod block">
-                    <div class="serv__modLabel serv__modLabel--green">
-                        Block
-                        <a id="a" class="a_decoration" href="Blocks_info.html">
-                            <span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"
-                                4269426942
-                            </span>
-                        </a>
->>>>>>> 51a62cf629ea3882078648d780a9db18f37a4709
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--<div class="serv__gpu" id="block_panel">-->
-        <!--<template id="block_template">-->
-        <!--<div class="serv__mod">-->
-        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-        <!--Block-->
-        <!--<a id="a" class="a_decoration" href="Blocks_info.html">-->
-        <!--<span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"-->
-        <!--4269426942-->
-        <!--</span>-->
-        <!--</a>-->
-        <!--</div>-->
-        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-        <!--Timestamp-->
-        <!--<span id="timestamp" class="header__statNumber">-->
-        <!--4269426942-->
-        <!--</span>-->
-        <!--</div>-->
-        <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
-        <!--Miner-->
-        <!--<span id="miner" class="header__statNumber">4269426942</span>-->
-        <!--</div>-->
+                <!--<div class="serv__gpu" id="block_panel">-->
+                <!--<template id="block_template">-->
+                <!--<div class="serv__mod">-->
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+                <!--Block-->
+                <!--<a id="a" class="a_decoration" href="Blocks_info.html">-->
+                <!--<span id="number" class="header__statNumber" style="color: #00d07f;font-size: 25px;"-->
+                <!--4269426942-->
+                <!--</span>-->
+                <!--</a>-->
+                <!--</div>-->
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+                <!--Timestamp-->
+                <!--<span id="timestamp" class="header__statNumber">-->
+                <!--4269426942-->
+                <!--</span>-->
+                <!--</div>-->
+                <!--<div class="serv__modLabel serv__modLabel&#45;&#45;green">-->
+                <!--Miner-->
+                <!--<span id="miner" class="header__statNumber">4269426942</span>-->
+                <!--</div>-->
 
-        <!--</div>-->
-        <!--</template>-->
-        <!--</div>-->
-    </article>
-    <article class='cuatro fontawesome-copy'>
-        <a href="trans_make.html" class="button active">Deal?</a>
-    </article>
-</section>
+                <!--</div>-->
+                <!--</template>-->
+                <!--</div>-->
+            </article>
+            <article class='cuatro fontawesome-copy'>
+                <a href="trans_make.html" class="button active">Deal?</a>
+            </article>
+        </section>
 
-<script>
-</script>
-</div >
+        <script>
+        </script>
+    </div>
 </body>
 
 </html>
