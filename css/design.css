@@ -141,6 +141,12 @@ body {
 	line-height: 41px;
 	margin-top: auto;
 }
+
+.header__servBut {
+	margin-top: auto;
+	height: 75px;
+}
+
 .holders_info {
 	color: #db2844;
 	letter-spacing: 1.4px;
