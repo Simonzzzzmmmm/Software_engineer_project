@@ -32,7 +32,7 @@ body {
 	padding: 0 30px 0 68px;
 }
 .gradual_come {
-	/*transform: translate3d(10%, 0, 0);*/
+	/* transform: translate3d(10%, 0, 0); */
 }
 .button_rendering {
 	font-family: Montserrat-Bold;
@@ -96,9 +96,15 @@ body {
 .header {
 	background: #FFF;
 	border-collapse: collapse;
+<<<<<<< HEAD
 	/*border-radius: 15px;*/
 	height: 500px;
 	min-height: 100%;
+=======
+	/* border-radius: 15px; */
+	right: 250px;
+	left: 250px;
+>>>>>>> 67f96127065a32ce0e0a6bd449a0b97fc03c85bb
 	width:100%;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }
@@ -135,6 +141,12 @@ body {
 	line-height: 41px;
 	margin-top: auto;
 }
+
+.header__servBut {
+	margin-top: auto;
+	height: 75px;
+}
+
 .holders_info {
 	color: #db2844;
 	letter-spacing: 1.4px;
@@ -192,8 +204,9 @@ main {
 	font-size:25px;
 }
 .table_layout {
-
-	height: 500px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+	height: 451.1px;
 	background-color: #dbd9d7;
 	overflow-x: auto;
 	-webkit-animation: rainbow 10s infinite;
