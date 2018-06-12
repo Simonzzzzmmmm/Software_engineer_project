@@ -97,8 +97,8 @@ body {
 	background: #FFF;
 	border-collapse: collapse;
 	/* border-radius: 15px; */
-	right: 250px;
-	left: 250px;
+	/*right: 250px;*/
+	/*left: 250px;*/
 	width:100%;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }

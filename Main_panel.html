@@ -9,13 +9,24 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/design.css">
     <!--===============================================================================================-->
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/datatables/data-tables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <script src="table/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-    <link rel="stylesheet" href="css/DashBoard_tab.css"></link>
+    <link rel="stylesheet" href="css/DashBoard_tab.css">
     <script type="text/javascript" src="js/Main_panel.js"></script>
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="table/images/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="table/images/icons/favicon.ico"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="table/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -53,7 +64,7 @@
     <link rel="stylesheet" type="text/css" href="table/css/table_util.css">
     <link rel="stylesheet" type="text/css" href="table/css/table_main.css">
     <style class="cp-pen-styles">
-        @import url(http://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);
+        /*@import url(http://fonts.googleapis.com/css?family=Dosis:600,200|Great+Vibes);*/
         /*@import url(http://weloveiconfonts.com/api/?family=fontawesome);*/
 
         *,
@@ -191,29 +202,31 @@
             height: 100%;
         }
 
-        #settings:checked~nav [for='settings'],
-        #books:checked~nav [for='books'] {
+        #settings:checked ~ nav [for='settings'],
+        #books:checked ~ nav [for='books'] {
             color: #1E6743;
             font-weight: 600;
         }
 
-        #settings:checked~nav [for='settings'] {}
+        #settings:checked ~ nav [for='settings'] {
+        }
 
-        #profile:checked~nav [for='profile'] {}
+        #profile:checked ~ nav [for='profile'] {
+        }
 
-        #settings:checked~nav:after {
+        #settings:checked ~ nav:after {
             left: 0%;
             border-top: 0 none;
         }
 
-        #books:checked~nav:after {
+        #books:checked ~ nav:after {
             left: 50%;
         }
 
-        #profile:checked~.uno,
-        #settings:checked~.dos,
-        #posts:checked~.tres,
-        #books:checked~.cuatro {
+        #profile:checked ~ .uno,
+        #settings:checked ~ .dos,
+        #posts:checked ~ .tres,
+        #books:checked ~ .cuatro {
             text-align: center;
             display: block;
             transform: scale(1);
@@ -230,138 +243,143 @@
     </style>
 </head>
 
-<body>
-    <div class="header body_gif">
-        <div class="container ">
-            <div class="header__serv">
-                <h1 class="header__servName">BlockChain</h1>
-            </div>
-            <div class="header__stat">
-                <h2 class="header__statName">Block Height</h2>
-                <div>
-                    <span id="block_height" class="header__statNumber">loading</span>
-                </div>
-            </div>
-            <div class="header__stat">
-                <h2 class="header__statName">Difficulty</h2>
-                <div>
-                    <div>
-                        <span id="difficulty" class="header__statNumber">loading</span>
-                    </div>
-                </div>
-            </div>
-
+<body style="width: 100%;">
+<div class="header body_gif">
+    <div class="container ">
+        <div class="header__serv">
+            <h1 class="header__servName">BlockChain</h1>
         </div>
-        <nav style="height: 100px">
-            <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
-            <label for="settings" class='fontawesome-film'>Blocks</label>
-            <label for="books" class='fontawesome-list-alt'>Make deal</label>
-        </nav>
-
-
-        <section style="width: 100%" class="body_gif">
-            <input type="radio" id="profile" value="1" name="tractor" checked='checked' />
-            <input type="radio" id="settings" value="2" name="tractor" />
-            <input type="radio" id="books" value="4" name="tractor" />
-            <article class='uno'>
-                <div class="limiter">
-                    <div class="container-table100">
-                        <div class="wrap-table100">
-                            <div class="table100 ver5 m-b-110">
-                                <div class="table100-head">
-                                    <table>
-                                        <thead>
-                                            <tr class="row100 head">
-                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Transaction
-                                                </th>
-                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">From</th>
-                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">To</th>
-                                                <th class="cell100 column4" style="text-align: center; font-size: 25px;">Amount</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-
-                                <div class="table100-body js-pscroll">
-                                    <table>
-                                        <tbody id="tx_panel">
-                                            <!--这里开始动态添加数据-->
-                                            <template id="tx_template">
-                                                <tr class="row100 body">
-                                                    <td class="cell100 column1">
-                                                        <a id="transaction" class="a_decoration" href="Tx_info.html">
-                                                            loading
-                                                        </a>
-                                                    </td>
-                                                    <td id="from" class="cell100 column2">loading</td>
-                                                    <td id="to" class="cell100 column3">loading</td>
-                                                    <td id="amount" class="cell100 column4">loading</td>
-                                                </tr>
-                                            </template>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="header__stat">
+            <h2 class="header__statName">Block Height</h2>
+            <div>
+                <span id="block_height" class="header__statNumber">loading</span>
+            </div>
+        </div>
+        <div class="header__stat">
+            <h2 class="header__statName">Difficulty</h2>
+            <div>
+                <div>
+                    <span id="difficulty" class="header__statNumber">loading</span>
                 </div>
+            </div>
+        </div>
 
-            </article>
-            <article class='dos fontawesome-wrench'>
-                <div class="limiter">
-                    <div class="container-table100">
-                        <button id="pre" class="pre_btn" onclick="PrevBlockPage()">
-                            <span>Pre</span>
-                        </button>
-                        <button id="next" class="next_btn" onclick="NextBlockPage()">
-                            <span>Next</span>
-                        </button>
-                        <div class="wrap-table100">
-                            <div class="table100 ver5 m-b-110">
-                                <div class="table100-head">
-                                    <table>
-                                        <thead>
-                                            <tr class="row100 head">
-                                                <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
-                                                </th>
-                                                <th class="cell100 column3" style="text-align: center; font-size: 25px;">Timestamp</th>
-                                                <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
-                                            </tr>
-                                        </thead>
-                                    </table>
-                                </div>
-
-                                <div class="table100-body js-pscroll">
-                                    <table>
-                                        <tbody id="block_panel">
-                                            <!--这里开始动态添加数据-->
-                                            <template id="block_template">
-                                                <tr id="block_id" class="row100 body block">
-                                                    <td class="cell100 column1">
-                                                        <a id="number" class="a_decoration" href="block_info_panel.html">
-                                                            loading
-                                                        </a>
-                                                    </td>
-                                                    <td id="timestamp" class="cell100 column2">loading</td>
-                                                    <td id="miner" class="cell100 column3">loading</td>
-                                                </tr>
-                                            </template>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class='cuatro fontawesome-copy'>
-                <a href="trans_make.html" class="button active">Deal?</a>
-            </article>
-        </section>
-
-        <script>
-        </script>
     </div>
+</div>
+<div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+    <a href="#nav_">
+        <i class="mbri-down mbr-iconfont"></i>
+    </a>
+</div>
+<nav id="nav_" style="height: 100px">
+    <label for="profile" class="fontawesome-align-justify" style="font-size: 16px">Transaction</label>
+    <label for="settings" class='fontawesome-film'>Blocks</label>
+    <label for="books" class='fontawesome-list-alt'>Make deal</label>
+</nav>
+<section id="sec" style="width: 100%" class="body_gif">
+    <input type="radio" id="profile" value="1" name="tractor" checked='checked'/>
+    <input type="radio" id="settings" value="2" name="tractor"/>
+    <input type="radio" id="books" value="4" name="tractor"/>
+    <article class='uno'>
+        <div class="limiter">
+            <div class="container-table100">
+                <div class="wrap-table100">
+                    <div class="table100 ver5 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Transaction
+                                    </th>
+                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">From</th>
+                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">To</th>
+                                    <th class="cell100 column4" style="text-align: center; font-size: 25px;">Amount</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody id="tx_panel">
+                                <!--这里开始动态添加数据-->
+                                <template id="tx_template">
+                                    <tr class="row100 body">
+                                        <td class="cell100 column1">
+                                            <a id="transaction" class="a_decoration" href="Tx_info.html">
+                                                loading
+                                            </a>
+                                        </td>
+                                        <td id="from" class="cell100 column2">loading</td>
+                                        <td id="to" class="cell100 column3">loading</td>
+                                        <td id="amount" class="cell100 column4">loading</td>
+                                    </tr>
+                                </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+    <article class='dos fontawesome-wrench'>
+        <div class="limiter">
+            <div class="container-table100">
+                <button id="pre" class="pre_btn" onclick="PrevBlockPage()">
+                    <span>Pre</span>
+                </button>
+                <button id="next" class="next_btn" onclick="NextBlockPage()">
+                    <span>Next</span>
+                </button>
+                <div class="wrap-table100">
+                    <div class="table100 ver5 m-b-110">
+                        <div class="table100-head">
+                            <table>
+                                <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1" style="text-align: center; font-size: 25px;">Blocks No.
+                                    </th>
+                                    <th class="cell100 column3" style="text-align: center; font-size: 25px;">Timestamp
+                                    </th>
+                                    <th class="cell100 column2" style="text-align: center; font-size: 25px;">Miner</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+                        <div class="table100-body js-pscroll">
+                            <table>
+                                <tbody id="block_panel">
+                                <!--这里开始动态添加数据-->
+                                <template id="block_template">
+                                    <tr id="block_id" class="row100 body block">
+                                        <td class="cell100 column1">
+                                            <a id="number" class="a_decoration" href="block_info_panel.html">
+                                                loading
+                                            </a>
+                                        </td>
+                                        <td id="timestamp" class="cell100 column2">loading</td>
+                                        <td id="miner" class="cell100 column3">loading</td>
+                                    </tr>
+                                </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class='cuatro fontawesome-copy'>
+        <a href="trans_make.html" class="button active">Deal?</a>
+    </article>
+</section>
+
+<script>
+</script>
+
 </body>
 
 </html>
