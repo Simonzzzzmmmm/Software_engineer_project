@@ -123,7 +123,6 @@ button {
 }
 
 .body_gif {
-  /*width: 100wh;*/
   height: 100vh;
   color: #fff;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
@@ -263,7 +262,7 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f6f6ff;
+  background: #c43eff;
   background: -webkit-linear-gradient(-135deg, #fffaf7, #47d0b7);
   background: -o-linear-gradient(-135deg, #fffaf7, #47d0b7);
   background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);

@@ -17,113 +17,115 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/design.css">
     <!--Icon Fonts-->
-    <link rel="stylesheet" media="screen" href="/fonts/font-awesome/font-awesome.min.css" />
+    <link rel="stylesheet" media="screen" href="/fonts/font-awesome/font-awesome.min.css"/>
     <script src='/js/jquery.js'></script>
     <script type="text/javascript" src="/js/Blocks_info.js"></script>
 
 </head>
 
 <body class="block_info_contain_panel">
-    <div class="header">
-        <div class="container">
-            <div class="header__serv">
-                <h2 class="header__servName">Block</h2>
-                <div>
-                    <span class="header__statNumber number">loading</span>
-                </div>
-            </div>
+<div class="header">
+    <div class="container">
+        <div class="header__serv">
+            <h2 class="header__servName">Block</h2>
             <div>
-                <div class="block_info_left">
-                    <button class="button_rendering btn btn-custom" onclick="Back()">
-                        <p>
-                            <i class="arrow left"></i>
-                        </p>
-                        <span>Goback</span>
-                    </button>
-                </div>
-                <div class="block_info_left">
-                    <button class="button_rendering btn btn-custom" onclick="Next()">
-                        <p>
-                            <i class="arrow left"></i>
-                        </p>
-                        <span>GoNext</span>
-                    </button>
-                </div>
+                <span class="header__statNumber number">loading</span>
+            </div>
+        </div>
+        <div>
+            <div class="block_info_left">
+                <button class="button_rendering btn btn-custom" onclick="Back()">
+                    <p>
+                        <i class="arrow left"></i>
+                    </p>
+                    <span>Goback</span>
+                </button>
+            </div>
+            <div class="block_info_left">
+                <button class="button_rendering btn btn-custom" onclick="Next()">
+                    <p>
+                        <i class="arrow left"></i>
+                    </p>
+                    <span>GoNext</span>
+                </button>
             </div>
         </div>
     </div>
-    <!-- Pricing Table Section -->
-    <section id="pricing-table">
-        <div class="container">
-            <div class="row">
-                <div class="pricing">
-                    <div class="col-md-4 col-sm-12 col-xs-12" style="width: 50%">
-                        <div class="pricing-table">
-                            <div class="pricing-header">
-                                <p class="pricing-title">Block info</p>
-                                <p class="pricing-rate">No.
-                                    <span class="number">loading</span>
-                                </p>
-                            </div>
-
-                            <div class="pricing-list">
-                                <ul style="overflow: auto;width: 100%;height: 300px;">
-                                    <li style="color: black;font-size: 20px;height: 75px;" id=hash>
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Hashvalue:</span>
-                                            loading
-                                    </li>
-                                    <li id=size style="color: black;height: 75px;font-size: 20px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Blocksize:</span>
-                                            loading
-                                    </li>
-                                    <li id=difficulty style="color: black;height: 75px;font-size: 20px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Difficulty:</span>
-                                            loading
-                                    </li>
-                                    <li id=gas style="color: black;height: 75px;font-size: 20px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Gas:</span>
-                                            loading
-                                    </li>
-
-                                </ul>
-                            </div>
+</div>
+<!-- Pricing Table Section -->
+<section id="pricing-table">
+    <div class="container">
+        <div class="row">
+            <div class="pricing">
+                <div class="col-md-4 col-sm-12 col-xs-12" style="width: 50%">
+                    <div class="pricing-table">
+                        <div class="pricing-header">
+                            <p class="pricing-title">Block info</p>
+                            <p class="pricing-rate">No.
+                                <span class="number">loading</span>
+                            </p>
                         </div>
-                    </div>
 
+                        <div class="pricing-list">
+                            <ul style="overflow: auto;width: 100%;height: 300px;">
+                                <li style="color: black;font-size: 20px;height: 75px;word-break: break-all;" id=hash>
+                                    <span style="padding-top:20px;">Hashvalue:</span>
+                                    loading
+                                </li>
+                                <li id=size style="color: black;height: 75px;font-size: 20px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Blocksize:</span>
+                                    loading
+                                </li>
+                                <li id=difficulty style="color: black;height: 75px;font-size: 20px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Difficulty:</span>
+                                    loading
+                                </li>
+                                <li id=gas style="color: black;height: 75px;font-size: 20px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Gas:</span>
+                                    loading
+                                </li>
 
-                    <div class="col-md-4 col-sm-12 col-xs-12" style="width: 50%">
-                        <div class="pricing-table">
-                            <div class="pricing-header">
-                                <p class="pricing-title">Extra info</p>
-                                <p class="pricing-rate">
-                                    <sup>extra</sup> INFO</p>
-
-                            </div>
-
-                            <div class="pricing-list">
-                                <ul style="overflow: auto">
-                                    <li id=totalTx style="color: black;font-size: 20px;height: 75px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Totaltrans:</span>loading</li>
-                                    <li id=timestamp style="color: black;font-size: 20px;height: 75px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Timestamp:</span>loading</li>
-                                    <li id=miner style="color: black;font-size: 20px;height: 75px;">
-                                        <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;"   >Miner:</span>
-                                            loading
-                                    </li>
-                                    <li style="color: black;font-size: 20px;height: 75px;">
-                                        <a href="Main_panel.html">
-                                            <span>view more</span>
-                                    </li>
-                                </ul>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
+
+                <div class="col-md-4 col-sm-12 col-xs-12" style="width: 50%">
+                    <div class="pricing-table">
+                        <div class="pricing-header">
+                            <p class="pricing-title">Extra info</p>
+                            <p class="pricing-rate">
+                                <sup>extra</sup> INFO</p>
+
+                        </div>
+
+                        <div class="pricing-list">
+                            <ul style="overflow: auto">
+                                <li id=totalTx style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Totaltrans:</span>loading
+                                </li>
+                                <li id=timestamp style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Timestamp:</span>loading
+                                </li>
+                                <li id=miner style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Miner:</span>
+                                    loading
+                                </li>
+                                <li style="color: black;font-size: 20px;height: 75px;">
+                                    <a href="Main_panel.html">
+                                        <span>view more</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-    </section>
-    <!-- Pricing Table Section End -->
+    </div>
+</section>
+<!-- Pricing Table Section End -->
 </body>
 
 </html>

@@ -10,7 +10,7 @@ th {
     /*
        设置圆角属性
     */
-
+    text-align: center;
     border-collapse: collapse;
     transition: 0.5s;
     background: linear-gradient(#f6f6ff, #dbd2d9);
