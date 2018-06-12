@@ -8,7 +8,7 @@
 
 // 设置区块页面元素信息
 function SetBlockInfo(data) {
-    // console.log(data);
+    console.log(data);
     $("#hash")[0].innerText = $("#hash")[0].innerText.replace("loading", data.hash);
     $("#size")[0].innerHTML = data.size;
     $("#timestamp")[0].innerHTML = data.timestamp;
@@ -49,10 +49,10 @@ $(document).ready(function () {
         "dataType": "json",
         "data": {
             method: "eth_getBlockByNumber",
-            params: ["0x" + hex, false],
+            params: ["0x" + hex, true],
         },
         "success": function (resp) {
-            // console.log(resp);
+            console.log(resp);
             if (resp.success) {
                 // alert('Enroll successfully');
                 var obj = JSON.parse(resp.data);

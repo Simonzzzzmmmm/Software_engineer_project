@@ -11,6 +11,8 @@ rpc.single_post = function (res, method, params) {
         const element = params[index];
         if (element == "false") {
             params[index] = false;
+        } else if (element == "true") {
+            params[index] = true;
         }
     }
     var postData = JSON.stringify({

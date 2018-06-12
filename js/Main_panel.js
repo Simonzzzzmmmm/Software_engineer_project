@@ -156,47 +156,6 @@ function SetTxPage(blocks) {
     }
 }
 
-function TxPage() {
-    $.ajax({
-        "type": 'get',
-        "url": "/BlockPage",
-        "dataType": "json",
-        "data": {},
-        "success": function (resp) {
-            console.log(resp);
-            if (resp.success) {
-                alert('Enroll successfully');
-                alert(resp.data);
-                for (let index = 0; index < resp.data.length; index++) {
-                    AddTx(resp.data[index]);
-                }
-            } else {
-                alert('RPC failed');
-            }
-        },
-        "error": function (emsg) {
-            console.log(emsg);
-            alert('ajax failed');
-        }
-    });
-}
-
-// 将交易模板添加进交易面板
-function AddTx(data) {
-    console.log(data);
-    var obj = JSON.parse(data);
-    // var hash = obj.result.hash;
-    var hash = obj.result.hash;
-    var timestamp = obj.result.timestamp;
-    var miner = obj.result.miner;
-    var tx = document.querySelector('#tx_template');
-    // block.content.querySelector('#hash').innerHTML = hash;
-    tx.content.querySelector('#hash').innerHTML = hash;
-    tx.content.querySelector('#timestamp').innerHTML = timestamp;
-    tx.content.querySelector('#miner').innerHTML = miner;
-    tx.content.querySelector('#a').href = "/Tx_info/" + number;
-    $("#tx_panel").append(tx.content.cloneNode(true));
-}
 
 function rpc() {
     $.ajax({

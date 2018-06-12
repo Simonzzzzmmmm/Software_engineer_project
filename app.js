@@ -90,12 +90,6 @@ app.post('/rpc', function (req, res, next) {
 	rpc.single_post(res, method, params);
 });
 
-// 获取主页多个交易信息
-app.get('/TxPage', function (req, res, next) {
-	console.log(req);
-	rpc.getTxPage(res);
-});
-
 // 获取主页多个区块信息
 app.get('/BlockPage', function (req, res, next) {
 	console.log(req);
@@ -110,6 +104,11 @@ app.post('/UpdateBlockPage', function (req, res, next) {
 	rpc.getBlockByIndexes(res, start, end);
 });
 
+// 交易页面获取具体信息
+app.get('/Tx_info/0x*', function (req, res, next) {
+	console.log(req);
+	res.sendFile('/Tx_info.html', { root: __dirname });
+});
 
 // 区块页面获取具体信息
 app.get('/Block_info/0x*', function (req, res, next) {
