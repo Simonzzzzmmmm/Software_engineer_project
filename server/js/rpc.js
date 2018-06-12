@@ -115,13 +115,15 @@ function post(postData, success, fail) {
         }
     }
     var rpc_req = http.request(options, function (rpc_res) {
+        var buffer = "";
         dp.print('Status:', rpc_res.statusCode);
         dp.print('headers:', JSON.stringify(rpc_res.headers));
         rpc_res.setEncoding('utf-8');
         rpc_res.on('data', function (data) {
-            success(data);
+            buffer = buffer + data;
         });
         rpc_res.on('end', function () {
+            success(buffer);
             dp.print('No more data in rpc_response.********');
         });
     });
