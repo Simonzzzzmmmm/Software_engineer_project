@@ -87,6 +87,9 @@ app.post('/rpc', function (req, res, next) {
 	console.log(req);
 	var method = req.body.method;
 	var params = req.body.params;
+	if (method == "personal_sendTransaction") {
+		params[0] = JSON.parse(params[0]);
+	}
 	rpc.single_post(res, method, params);
 });
 
