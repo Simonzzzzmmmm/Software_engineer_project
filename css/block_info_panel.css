@@ -98,6 +98,7 @@ body {
 .ul_decoration li span{
     font-size: 30px;
     color: black;
+    text-align: left;
 }
 
 .ul_decoration {

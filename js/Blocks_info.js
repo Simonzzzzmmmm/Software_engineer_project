@@ -8,14 +8,29 @@
 
 // 设置区块页面元素信息
 function SetBlockInfo(data) {
-    console.log(data);
-    $("#hash")[0].innerText = $("#hash")[0].innerText.replace("loading", data.hash);
-    $("#size")[0].innerHTML = data.size;
-    $("#timestamp")[0].innerHTML = data.timestamp;
-    $("#totalTx")[0].innerHTML = data.transactions.length;
-    $("#gas")[0].innerHTML = data.gasUsed;
-    $("#difficulty")[0].innerHTML = data.difficulty;
-    $("#miner")[0].innerHTML = data.miner;
+
+    var hash_str = $("#hash")[0].innerText.split("\n");
+    $("#hash")[0].innerText = $("#hash")[0].innerText.split("\n")[1];
+    var size_str = $("#size")[0].innerText.split("\n");
+    $("#size")[0].innerText = $("#size")[0].innerText.split("\n")[1];
+    var timestamp_str = $("#timestamp")[0].innerText.split("\n");
+    $("#timestamp")[0].innerText = $("#timestamp")[0].innerText.split("\n")[1];
+    var totalTx_str = $("#totalTx")[0].innerText.split("\n");
+    $("#totalTx")[0].innerText = $("#totalTx")[0].innerText.split("\n")[1];
+    var gas_str = $("#gas")[0].innerText.split("\n");
+    $("#gas")[0].innerText = $("#gas")[0].innerText.split("\n")[1];
+    var difficulty_str = $("#difficulty")[0].innerText.split("\n");
+    $("#difficulty")[0].innerText = $("#difficulty")[0].innerText.split("\n")[1];
+    var miner_str = $("#miner")[0].innerText.split("\n");
+    $("#miner")[0].innerText = $("#miner")[0].innerText.split("\n")[1];
+
+    $("#hash")[0].innerText = hash_str[0]+$("#hash")[0].innerText.replace("loading", data.hash);
+    $("#size")[0].innerHTML = size_str[0]+$("#size")[0].innerText.replace("loading", data.size);
+    $("#timestamp")[0].innerHTML = timestamp_str[0]+data.timestamp;
+    $("#totalTx")[0].innerHTML = totalTx_str[0]+data.transactions.length;
+    $("#gas")[0].innerHTML = gas_str[0]+data.gasUsed;
+    $("#difficulty")[0].innerHTML = difficulty_str[0]+data.difficulty;
+    $("#miner")[0].innerHTML = miner_str[0]+data.miner;
 }
 
 function Back() {
