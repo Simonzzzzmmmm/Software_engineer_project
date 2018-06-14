@@ -31,6 +31,15 @@ function SetBlockInfo(data) {
     $("#gas")[0].innerHTML = gas_str[0]+data.gasUsed;
     $("#difficulty")[0].innerHTML = difficulty_str[0]+data.difficulty;
     $("#miner")[0].innerHTML = miner_str[0]+data.miner;
+
+    var txs = data.transactions;
+    for (var ti = 0; ti < txs.length; ti++) {
+        var hash = txs[ti];
+        var tx_template = document.querySelector('#tx_template');
+        tx_template.content.querySelector('#hash').innerHTML = hash;
+        tx_template.content.querySelector('#hash').href = "/Tx_info/" + hash;
+        $("#tx_panel").append(tx_template.content.cloneNode(true));
+    }
 }
 
 function Back() {
@@ -64,7 +73,7 @@ $(document).ready(function () {
         "dataType": "json",
         "data": {
             method: "eth_getBlockByNumber",
-            params: ["0x" + hex, true],
+            params: ["0x" + hex, false],
         },
         "success": function (resp) {
             console.log(resp);

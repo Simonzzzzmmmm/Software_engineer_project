@@ -9,7 +9,7 @@ function hex2int(hex) {
 }
 
 function parseArray(datas) {
-    for (let i = 0; i < datas.length; i++) {
+    for (var i = 0; i < datas.length; i++) {
         var data = datas[i];
         var obj = JSON.parse(data);
         datas[i] = obj.result;
@@ -20,9 +20,9 @@ function bubbleSort(arr) {
     var len = arr.length;
     for (var i = 0; i < len; i++) {
         for (var j = 0; j < len - 1 - i; j++) {
-            if (hex2int(arr[j].number) < hex2int(arr[j+1].number)) {        //相邻元素两两对比
-                var temp = arr[j+1];        //元素交换
-                arr[j+1] = arr[j];
+            if (hex2int(arr[j].number) < hex2int(arr[j + 1].number)) {        //相邻元素两两对比
+                var temp = arr[j + 1];        //元素交换
+                arr[j + 1] = arr[j];
                 arr[j] = temp;
             }
         }
@@ -91,7 +91,7 @@ function UpdateBlockPage(start, end) {
         "type": 'post',
         "url": "/UpdateBlockPage",
         "dataType": "json",
-        "data": {start:start, end:end},
+        "data": { start: start, end: end },
         "success": function (resp) {
             console.log(resp);
             if (resp.success) {
@@ -116,7 +116,7 @@ function UpdateBlockPage(start, end) {
 function AddBlocks(datas) {
     console.log(datas);
 
-    for (let index = 0; index < datas.length; index++) {
+    for (var index = 0; index < datas.length; index++) {
         var obj = datas[index];
         // var obj = JSON.parse(data);
         // var hash = obj.hash;
@@ -135,11 +135,13 @@ function AddBlocks(datas) {
 
 function SetTxPage(blocks) {
     console.log(blocks);
+    var MAX_TX = 30;
+    var tx_count = 0;
 
-    for (let index = 0; index < blocks.length; index++) {
+    for (var index = 0; index < blocks.length; index++) {
         var block = blocks[index];
         var txs = block.transactions;
-        for (let ti = 0; ti < txs.length; ti++) {
+        for (var ti = 0; ti < txs.length; ti++) {
             const tx = txs[ti];
             var hash = tx.hash;
             var from = tx.from;
@@ -152,6 +154,10 @@ function SetTxPage(blocks) {
             tx_template.content.querySelector('#amount').innerHTML = amount;
             tx_template.content.querySelector('#transaction').href = "/Tx_info/" + hash;
             $("#tx_panel").append(tx_template.content.cloneNode(true));
+            tx_count++;
+            if (tx_count >= MAX_TX) {
+                return;
+            }
         }
     }
 }
@@ -182,12 +188,12 @@ function rpc() {
     });
 }
 
-$(document).ready(function (){
+$(document).ready(function () {
     BlockPage();
-    
+
 });
 
 // (function () {
-    
-    
+
+
 // }());
