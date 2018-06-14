@@ -15,9 +15,9 @@ function sign_up() {
             "success": function (resp) {
                 console.log(resp);
                 var data = JSON.parse(resp.data);
-                alert(data);
+                // alert(data);
                 if (resp.success) {
-                    alertify.custom("Sign up successful! Your account is:" + data.result + "                         Please remember!");
+                    alertify.alert("Sign up successful!\n Your account is:\n" + data.result + "\n" + "Please remember!");
                 } else {
                     alert('RPC failed');
                 }
