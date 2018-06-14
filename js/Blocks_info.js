@@ -31,6 +31,26 @@ function SetBlockInfo(data) {
     $("#gas")[0].innerHTML = gas_str[0]+data.gasUsed;
     $("#difficulty")[0].innerHTML = difficulty_str[0]+data.difficulty;
     $("#miner")[0].innerHTML = miner_str[0]+data.miner;
+
+
+    for (var ti = 0; ti < txs.length; ti++) {
+        const tx = txs[ti];
+        var hash = tx.hash;
+        var from = tx.from;
+        var to = tx.to;
+        var amount = tx.value;
+        var tx_template = document.querySelector('#tx_template');
+        tx_template.content.querySelector('#transaction').innerHTML = hash;
+        tx_template.content.querySelector('#from').innerHTML = from;
+        tx_template.content.querySelector('#to').innerHTML = to;
+        tx_template.content.querySelector('#amount').innerHTML = amount;
+        tx_template.content.querySelector('#transaction').href = "/Tx_info/" + hash;
+        $("#tx_panel").append(tx_template.content.cloneNode(true));
+        tx_count++;
+        if (tx_count >= MAX_TX) {
+            return;
+        }
+    }
 }
 
 function Back() {
@@ -64,7 +84,7 @@ $(document).ready(function () {
         "dataType": "json",
         "data": {
             method: "eth_getBlockByNumber",
-            params: ["0x" + hex, true],
+            params: ["0x" + hex, false],
         },
         "success": function (resp) {
             console.log(resp);

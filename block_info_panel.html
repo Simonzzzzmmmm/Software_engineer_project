@@ -57,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div class="pricing">
-                <div class="animate-bounce-up col-md-4 col-sm-12 col-xs-12" style="width: 50%">
+                <div class="animate-bounce-up col-md-4 col-sm-12 col-xs-12" style="width: 33%">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <p class="pricing-title">Block info</p>
@@ -91,7 +91,7 @@
                 </div>
 
 
-                <div class="animate-bounce-up col-md-4 col-sm-12 col-xs-12" style="width: 50%">
+                <div class="animate-bounce-up col-md-4 col-sm-12 col-xs-12" style="width: 33%">
                     <div class="pricing-table">
                         <div class="pricing-header">
                             <p class="pricing-title">Extra info</p>
@@ -101,21 +101,55 @@
                         </div>
 
                         <div class="pricing-list">
-                            <ul style="overflow: auto">
+                            <ul style="overflow: auto;size: 10ch;" class="ul_decoration">
                                 <li id=totalTx style="color: black;font-size: 20px;height: 75px;">
                                     <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Totaltrans:</span>
+                                    <a id="transaction" class="a_decoration" href="Tx_info.html">
+                                        loading
+                                    </a>
                                 </li>
                                 <li id=timestamp style="color: black;font-size: 20px;height: 75px;">
                                     <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Timestamp:</span>
+                                    <a id="transaction1" class="a_decoration" href="Tx_info.html">
+                                        loading
+                                    </a>
                                 </li>
                                 <li id=miner style="color: black;font-size: 20px;height: 75px;">
                                     <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;">Miner:</span>
-                                    
+                                    <a id="transaction2" class="a_decoration" href="Tx_info.html">
+                                        loading
+                                    </a>
                                 </li>
                                 <li style="color: black;font-size: 20px;height: 75px;">
                                     <a href="../Main_panel.html">
-                                        <span>view more</span>
+                                        <span>Return</span>
                                     </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-bounce-up col-md-4 col-sm-12 col-xs-12" style="width: 33%">
+                    <div class="pricing-table">
+                        <div class="pricing-header">
+                            <p class="pricing-title">Transaction</p>
+                            <p class="pricing-rate">
+                                <sup>trans</sup> INFO</p>
+                        </div>
+
+                        <div class="pricing-list">
+                            <ul style="overflow: auto;" class="ul_decoration">
+                                <!--每一个块中的交易信息，可以手动添加,注意这里a标签-->
+                                <li id=totalTx1 style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;"></span>
+                                </li>
+                                <li id=timestamp1 style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;"></span>
+                                    <a>loading</a>
+                                </li>
+                                <li id=miner1 style="color: black;font-size: 20px;height: 75px;">
+                                    <span style="padding-top:20px;font-family: Cambria;float: right; color: #000000;"></span>
+                                    loading
                                 </li>
                             </ul>
                         </div>
