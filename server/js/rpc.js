@@ -7,7 +7,7 @@ var rpc = module.exports = {};
 
 // 单次post
 rpc.single_post = function (res, method, params) {
-    for (let index = 0; index < params.length; index++) {
+    for (var index = 0; index < params.length; index++) {
         const element = params[index];
         if (element == "false") {
             params[index] = false;
@@ -55,7 +55,7 @@ rpc.getBlockByIndexes = function (res, start, end) {
     var result = [];
     var failed = false;
     // console.log(typeof start, typeof end);
-    for (let index = start; index < end; index++) {
+    for (var index = start; index < end; index++) {
         var hex = "0x" + index.toString(16);
         var postData = JSON.stringify({
             jsonrpc: "2.0",
