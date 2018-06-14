@@ -1,21 +1,23 @@
 
+
 function sign_up() {
+
     if ($("#password1")[0].value == $("#password2")[0].value) {
+
         $.ajax({
             "type": 'post',
             "url": "/rpc",
             "dataType": "json",
             "data": {
                 method: "personal_newAccount",
-                params: [$("#password1")[0].value],
+                params: [$("#password1")[0].value]
             },
             "success": function (resp) {
                 console.log(resp);
                 var data = JSON.parse(resp.data);
+                alert(data);
                 if (resp.success) {
-                    alert("Sign up successful! Your account is:"
-                        + data.result
-                        + "                         Please remember!");
+                    alertify.custom("Sign up successful! Your account is:" + data.result + "                         Please remember!");
                 } else {
                     alert('RPC failed');
                 }
@@ -25,11 +27,11 @@ function sign_up() {
                 alert('Post failed');
             }
         });
+
     } else {
-        alert("两次密码不一样");
+        alertify.alert("两次密码不一样");
     }
 }
-
 
 (function ($) {
     "use strict";
