@@ -20,11 +20,11 @@
 
 ```
 git clone + link
-node app.js
+node app.js (start the backend engine)
 ```
 
 ## Contributor
 
-GENGXIN WANG
+GENGXIN WANG (Back-end design)
 
-MENGZHOU
+MENGZHOU (Front-end design)
