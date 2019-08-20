@@ -19,7 +19,7 @@
 ## Install
 
 ```
-git clone
+git clone + link
 node app.js
 ```
 
